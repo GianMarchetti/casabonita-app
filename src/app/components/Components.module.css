@@ -1,0 +1,158 @@
+.header {
+    color: black;
+    background-color: white;
+    /* box-shadow: 2px 0px 5px 0px black; */
+    box-shadow: 0px 7px 5px 2px rgba(0, 0, 0, 0.100);
+    text-align: center;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+    position: fixed;
+    width: 100%;
+    top: -1vh;
+    z-index: 99;
+    padding: 1%;
+}
+
+.logoImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 8%;
+}
+
+.dropDesk {
+    margin-top: 1em;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.dropMob {
+    display: none;
+}
+
+.tienda{
+    font-weight: bold;
+}
+
+.Free {
+    color: magenta;
+    text-shadow: -2px 0px 4px magenta;
+    -webkit-text-stroke: mediumvioletred 0.8px;
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
+.cart{
+    width: 28px;
+    height: 32px;
+}
+
+.cart :hover {
+    width: 30px;
+    height: 35px;
+}
+
+.a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+.footer {
+    color: black;
+    background-color: white;
+    /* box-shadow: 0px -1px 5px 0px black; */
+    box-shadow: 0px -7px 5px 2px rgba(0, 0, 0, 0.100);
+    text-align: center;
+    margin-top: 2em;
+    padding: 4px;
+    bottom: -20;
+    position: absolute;
+    width: 100%;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.aLink {
+    font-family: monospace;
+    font-size: small;
+}
+
+.aLink :hover{
+    color: red;
+}
+
+.ig{
+    display: inline;
+}
+
+.marquee{
+    width: 100%;
+    height: 1,5em;
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: 'Tilt Prism', cursive;
+}
+
+@media screen and (max-width: 850px) {
+    .header{
+        padding: 0%;
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+    .logoImg{
+        height: 6em;
+        width: 6em;
+        /* margin-right: 25px; */
+    }
+    .cart{
+        width: 55px;
+        padding: 4%;
+    }
+    .logoDesk{
+        display: none;
+    }
+    .dropDesk{
+        display: none;
+    }
+    .dropMob{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .tienda{
+        color: black;
+    }
+    .footer{
+        flex-direction: row;
+        position: fixed;
+        bottom: -1vh;
+        width: 100%;
+        padding: 1%;
+        z-index: 1000;
+    }
+    .redes{
+        flex-direction: row;
+        justify-content: center;
+        padding: 2%;
+    }
+    .ig{
+        margin-left: 2px;
+    }
+    .aLink{
+        display: none;
+    }
+}

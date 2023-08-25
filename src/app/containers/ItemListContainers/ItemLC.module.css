@@ -1,0 +1,44 @@
+.boxes {
+    background-color: purple;
+    border-color: black solid 8px;
+    border-radius: 2%;
+    width: 35%;
+    margin: 1%;
+    padding: 8%;
+}
+
+.home {
+    text-align: center;
+    height: 500px;
+    margin: 2%;
+}
+
+.prodS {
+    background-color: pink;
+    height: 100px;
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+
+.pic1 {
+    color: white;
+    font-weight: bolder;
+    font-size: 6vh;
+    float: left;
+    height: 60vh;
+    width: 95vh;
+    background-image: url(https://i.ibb.co/Dwj9tks/Whats-App-Image-2021-05-13-at-19-13-30.jpg);
+    background-position: center;
+}
+
+.pic2 {
+    color: white;
+    font-weight: bolder;
+    font-size: 6vh;
+    float: right;
+    height: 60vh;
+    width: 95vh;
+    background-image: url(https://i.ibb.co/gTgnFWk/Whats-App-Image-2021-05-13-at-19-13-33.jpg);
+    background-position: center;
+}

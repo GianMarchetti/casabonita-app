@@ -1,0 +1,8 @@
+
+.Free {
+    color: magenta;
+    /* text-shadow: -2px 0px 4px magenta; */
+    -webkit-text-stroke: mediumvioletred 0.8px;
+    display: inline-block;
+    /* transform: rotate(45deg); */
+}
