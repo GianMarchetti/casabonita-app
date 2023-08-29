@@ -76,7 +76,7 @@ function useMenuAnimation(isOpen = boolean) {
   return scope;
 }
 
-export function DropdownMenu ({navLinks}) {
+export default function DropdownMenu ({navLinks}) {
 
     const [isOpen, setIsOpen] = useState(false);
     const scope = useMenuAnimation(isOpen);  
