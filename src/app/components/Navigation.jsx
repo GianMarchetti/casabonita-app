@@ -8,7 +8,7 @@ import Logo from '../assets/imgs/logoCasaBonita.jpg'
 import Cart from '../assets/icons/cart-green.svg'
 import { Oswald } from 'next/font/google'
 import { Big_Shoulders_Display } from 'next/font/google'
-import { DropdownMenu } from './Dropdown.jsx'
+import { DropdownMenu } from '../dropdownMenu/Dropdown.jsx'
 
 
 const Font = Oswald({

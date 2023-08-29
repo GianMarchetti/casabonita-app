@@ -22,7 +22,7 @@ export default function contacto(){
 
                 <div className={styles.container}>
                     <div className={styles.cardMain}>
-                        <Image src={Deco} className={styles.imgMain}/>
+                        <Image src={Deco} className={styles.imgMain} alt="img deco" />
                         <p className={styles.cardTextMain}>Deco Habitación</p>
                         <div className={styles.divider}></div>
                         <a href='/' className={styles.cardVMMain}>
@@ -32,7 +32,7 @@ export default function contacto(){
                     <div className={styles.galleryCard}>
 
                         <div className={styles.card}>
-                                <Image src={Deco} className={styles.cardImg}/> 
+                                <Image src={Deco} className={styles.cardImg} alt="img deco"/> 
                                 <p className={styles.cardText}>Deco Habitación</p>
                             <div className={styles.cardBtn}>
                                 <a href='./decoracionHabitacion' className={styles.cardVerMas}>
@@ -41,7 +41,7 @@ export default function contacto(){
                             </div>
                         </div>
                         <div className={styles.card}>
-                                <Image src={Deco} className={styles.cardImg}/> 
+                                <Image src={Deco} className={styles.cardImg} alt="img deco"/> 
                                 <p className={styles.cardText}>Deco Habitación</p>
                             <div className={styles.cardBtn}>
                                 <a href='./decoracionHabitacion' className={styles.cardVerMas}>
@@ -50,7 +50,7 @@ export default function contacto(){
                             </div>
                         </div>
                         <div className={styles.card}>
-                                <Image src={Deco} className={styles.cardImg}/> 
+                                <Image src={Deco} className={styles.cardImg} alt="img deco"/> 
                                 <p className={styles.cardText}>Deco Habitación</p>
                             <div className={styles.cardBtn}>
                                 <a href='./decoracionHabitacion' className={styles.cardVerMas}>
@@ -72,7 +72,7 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
@@ -82,7 +82,7 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
@@ -92,7 +92,7 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
@@ -102,7 +102,7 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
@@ -112,7 +112,7 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
@@ -122,7 +122,7 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
@@ -132,7 +132,7 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
@@ -142,7 +142,7 @@ export default function contacto(){
                                
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe}/>
+                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
                                     <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
                                     </a>
