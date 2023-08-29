@@ -1,6 +1,10 @@
+'use client'
 import styles from './guiasGratis.module.css'
 import { Big_Shoulders_Display } from 'next/font/google'
-
+import Loading from '../components/Loading'
+import Link from 'next/link'
+import Image from 'next/image'
+import Deco from '../assets/imgs/deco.jpg'
 
 
 const Big = Big_Shoulders_Display({
@@ -10,41 +14,146 @@ const Big = Big_Shoulders_Display({
 
 export default function contacto(){
     return(
-        <main>
-
-            <div className={styles.contact}>
+        <main className={styles.guias}>
                 
-                <h1>Guias <span className={styles.Free}><p className={Big.className}>GRATIS</p></span></h1>
+                <h1>Guias Gratis</h1>
             
-                <div className={styles.fondo}>     
-                         
-                    <h2 className={styles.infoTitle}>Te ayudaremos con lo que necesites a la brevedad</h2>
-         
-                    <div className={styles.info}>
-                        <div className={styles.infoDiv}>
-                            <p className={styles.infoTitle}>Ubicación</p>
-                            <p className={styles.infoText}>Santa Fe, Arg</p>
+{/* -----------------------Galeria Principal------------------------ */}
+
+                <div className={styles.container}>
+                    <div className={styles.cardMain}>
+                        <Image src={Deco} className={styles.imgMain}/>
+                        <p className={styles.cardTextMain}>Deco Habitación</p>
+                        <div className={styles.divider}></div>
+                        <a href='/' className={styles.cardVMMain}>
+                            <p >Ver Mas</p>
+                        </a>
+                    </div>
+                    <div className={styles.galleryCard}>
+
+                        <div className={styles.card}>
+                                <Image src={Deco} className={styles.cardImg}/> 
+                                <p className={styles.cardText}>Deco Habitación</p>
+                            <div className={styles.cardBtn}>
+                                <a href='./decoracionHabitacion' className={styles.cardVerMas}>
+                                    <p>Ver Mas</p>
+                                </a>
+                            </div>
                         </div>
-                        <div className={styles.infoDiv}>
-                            <p className={styles.infoTitle}>Correo electrónico</p>
-                            <p className={styles.infoText}>yasminlmarchetti@gmail.com</p>
+                        <div className={styles.card}>
+                                <Image src={Deco} className={styles.cardImg}/> 
+                                <p className={styles.cardText}>Deco Habitación</p>
+                            <div className={styles.cardBtn}>
+                                <a href='./decoracionHabitacion' className={styles.cardVerMas}>
+                                    <p>Ver Mas</p>
+                                </a>
+                            </div>
                         </div>
-                        <div className={styles.infoDiv}>
-                            <p className={styles.infoTitle}>Instagram</p>
-                            <p className={styles.infoText}><a href={`https://www.instagram.com/yas.casabonita/`}>@yas.casabonita</a></p>
+                        <div className={styles.card}>
+                                <Image src={Deco} className={styles.cardImg}/> 
+                                <p className={styles.cardText}>Deco Habitación</p>
+                            <div className={styles.cardBtn}>
+                                <a href='./decoracionHabitacion' className={styles.cardVerMas}>
+                                    <p>Ver Mas</p>
+                                </a>
+                            </div>
                         </div>
+                    
+                    </div>
+                </div>
+            
+{/* ---------------------------Galeria ver mas--------------------------- */}
+
+                    <div className={styles.galleryVM}>
+
+                        <h2 className={styles.h2}>Ver mas Guias</h2>
+
+                        <div className={styles.contVideos}>
+
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div> 
+
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div>
+
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div> 
+
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div>
+
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div> 
+
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div>  
+
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div>
+                               
+                            <div className={styles.cardVideos}>
+                                <div className={styles.videos}>
+                                    <Image src={Deco} className={styles.iframe}/>
+                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                        <p>Ver Mas</p>
+                                    </a>
+                                </div>
+                                <p> Deco Habitación </p> 
+                            </div>   
+                            
+                        </div>  
+
                     </div>
 
-                    <p className={styles.fondoText}>Tambien te dejamos un link con destino a nuestro whatsapp, en el que podes comunicarte con nosotros y dejarnos las preguntas que tengas.</p>
-                
-                </div>
-
-                {/* <a href='https://wa.link/duppll'>
-                    <button className={styles.buttonContact}>Ir a Whatsapp</button>
-                </a> */}
-            
-            </div>
-            
         </main>
     )
 }

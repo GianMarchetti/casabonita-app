@@ -7,9 +7,9 @@ export default function contacto(){
     return(
         <main>
 
+                <h1>Contactanos</h1>
             <div className={styles.contact}>
                 
-                <h1>Contactanos</h1>
             
                 <div className={styles.fondo}>     
                          

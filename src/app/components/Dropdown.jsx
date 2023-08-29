@@ -1,8 +1,6 @@
 'use client'
-import { animate } from "framer-motion/dom"
 import { useState, useEffect } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
-import { Big_Shoulders_Display } from "next/font/google";
 import Link from "next/link";
 import './dropdown.css'
 
@@ -17,12 +15,9 @@ const linksDesk = [{
     route: '/talleres'
 }]
 
-const Guias = [{
-  font: Big,
-}]
 const linksMob = [{
   label: 'Inicio',
-  route: '/'
+  route: '/',
 },{
   label: 'Productos',
   route: '/productos'
@@ -42,11 +37,6 @@ const linksMob = [{
     label: 'Blog',
     route: '/blog'
 }]
-
-const Big = Big_Shoulders_Display({
-  weight: '700',
-  subsets: ['latin']
-})
 
 const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 

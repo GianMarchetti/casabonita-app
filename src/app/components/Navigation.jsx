@@ -8,7 +8,7 @@ import Logo from '../assets/imgs/logoCasaBonita.jpg'
 import Cart from '../assets/icons/cart-green.svg'
 import { Oswald } from 'next/font/google'
 import { Big_Shoulders_Display } from 'next/font/google'
-import { DropdownMenu } from './DropdownMenu/page'
+import { DropdownMenu } from './Dropdown.jsx'
 
 
 const Font = Oswald({
@@ -40,10 +40,10 @@ export function Navigation ({navLinks}) {
           <div className={styles.dropDesk}>
             <Link href={`/`} >Inicio</Link>
             <DropdownMenu />
-            <Link href={`/contact`}>Contacto</Link>
             <Link href={`/guias`}> <span>Guias</span><span className={styles.Free}><p className={Big.className}>GRATIS</p></span></Link>
             <Link href={`https://www.instagram.com/yas.casabonita/`}>Blog</Link>
-            <Link href={`/carrito`}><Image src={Cart} className={styles.cart}/></Link>
+            <Link href={`/contact`}>Contacto</Link>
+            <Link href={`/cart`}><Image src={Cart} className={styles.cart}/></Link>
           </div>
 
 {/*---------------------- Menu Mobile ------------------------------------*/}
@@ -51,7 +51,7 @@ export function Navigation ({navLinks}) {
           <div className={styles.dropMob}>
             <DropdownMenu />
             <Link href='/' className={styles.logoMob}><Image alt='Logo de Casa Bonita' src={Logo} className={styles.logoImg}/></Link>
-            <Link href={`/carrito`}><Image src={Cart} className={styles.cart}/></Link>
+            <Link href={`/cart`}><Image src={Cart} className={styles.cart}/></Link>
           </div>
 
         </nav>

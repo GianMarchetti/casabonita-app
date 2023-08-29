@@ -8,7 +8,9 @@
 
 .fondo{
     height: 40em;
-    width: 100%;
+    width: 95%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
     margin-top: 2%;
     margin-bottom: 7%;
     background-image: url(../assets/imgs/contacto.png);
