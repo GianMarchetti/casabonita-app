@@ -16,11 +16,11 @@ export default function contacto(){
     return(
         <main className={styles.guias}>
                 
-                <h1>Guias Gratis</h1>
+            <h1>Guias Gratis</h1>
             
 {/* -----------------------Galeria Principal------------------------ */}
 
-                <div className={styles.container}>
+            <div className={styles.container}>
                     <div className={styles.cardMain}>
                         <Image src={Deco} className={styles.imgMain} alt="img deco" />
                         <p className={styles.cardTextMain}>Deco Habitación</p>
@@ -60,11 +60,11 @@ export default function contacto(){
                         </div>
                     
                     </div>
-                </div>
+            </div>
             
 {/* ---------------------------Galeria ver mas--------------------------- */}
 
-                    <div className={styles.galleryVM}>
+            <div className={styles.galleryVM}>
 
                         <h2 className={styles.h2}>Ver mas Guias</h2>
 
@@ -152,7 +152,7 @@ export default function contacto(){
                             
                         </div>  
 
-                    </div>
+            </div>
 
         </main>
     )
