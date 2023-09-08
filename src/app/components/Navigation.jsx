@@ -62,7 +62,7 @@ function useMenuAnimation(isOpen = boolean) {
 
 const linksDesk = [{
   label: 'Productos',
-  route: '/productos'
+  route: '/components/products'
 },{
   label: 'Asesorias',
   route: '/asesorias'

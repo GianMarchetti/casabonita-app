@@ -1,0 +1,49 @@
+.layout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product{
+    height: fit-content;
+    margin-bottom: 2%;
+}
+
+.card{
+    background-color: #fff;
+    color: #698b22;
+    border-radius: 4%;
+    padding : .7em;
+    width: 20em;
+    font-size:.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    color: black;
+}
+
+.cardImg {
+    width: 90%;
+    height: 250px;
+    border-radius: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.cardPrice {
+    font-weight: bold ;
+    font-style: italic;
+    padding: 3%;
+}
+
+.cardBtnVM {
+    text-align: center;
+    padding: 2%;
+    width: max-content;
+    height: 40px;
+    font-size: 14px;
+    color: black;
+    box-shadow: 0px 1px 4px 0px black;
+    border: 1px solid black;
+}

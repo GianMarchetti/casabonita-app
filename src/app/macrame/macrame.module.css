@@ -1,0 +1,92 @@
+.layout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product{
+    height: fit-content;
+    margin-bottom: 2%;
+}
+
+.card{
+    background-color: #fff;
+    color: #698b22;
+    border-radius: 4%;
+    padding : .7em;
+    width: 20em;
+    font-size:.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    color: black;
+}
+
+.cardImg {
+    width: 90%;
+    height: 250px;
+    border-radius: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.cardPrice {
+    font-weight: bold ;
+    font-style: italic;
+    padding: 3%;
+}
+
+.cardBtnVM {
+    text-align: center;
+    padding: 2%;
+    width: max-content;
+    height: 40px;
+    font-size: 14px;
+    color: black;
+    box-shadow: 0px 1px 4px 0px black;
+    border: 1px solid black;
+}
+
+.tallerSection {
+    display: flex;
+    flex-direction: column;
+    height: 25em;
+}
+
+.tallerText {
+    font-size: 32px;
+    margin-bottom: 2%;
+    text-shadow: 2px 2px 4px black;
+}
+
+.tallerBanner {
+    display: flex;
+    justify-content: space-evenly	;
+    align-items: center;
+    /* height: fit-content; */
+}
+
+.Link {
+    border: 5px solid beige;
+}
+
+.tallerCard {
+    background-image: url(../assets/imgs/tallerMacrame.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 15em;
+    width: 15em;
+    font-size: 20px;
+    border: 5px solid rgba(0, 0, 0, 0.850);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tallerCard p {
+    background-color: rgba(0, 0, 0, 0.700);
+    border: 2px solid beige;
+    padding: 2%;
+}

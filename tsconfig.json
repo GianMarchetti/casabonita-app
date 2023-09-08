@@ -20,14 +20,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/layout.jsx", "src/app/providers.jsx"  ],
+    "**/*.tsx",
+    "src/app/layout.jsx",
+    "src/app/providers.jsx"
+, "src/app/api/hello/route.js"  ],
   "exclude": [
     "node_modules"
   ]
