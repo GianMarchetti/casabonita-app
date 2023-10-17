@@ -1,0 +1,39 @@
+.btn2 {
+    width: 150px;
+    display: inline-block;
+    border: 1px solid white;
+    color: green;
+    background-color: pink;
+    border-radius: 8%;
+    padding: 8px;
+}
+
+.btn {
+    width: 50px;
+    /* border: 1px solid black; */
+    border: none;
+    color: green;
+    background-color: white;
+    border-radius: 8%;
+    margin: 4%;
+    border-radius: 8%;
+}
+
+.btnc {
+    width: 81px;
+    border: 1px solid white;
+    color: green;
+    background-color: pink;
+    border-radius: 8%;
+    margin: 2%;
+}
+
+.btnIC {
+    width: 50px;
+    border: 1px solid white;
+    color: green;
+    background-color: pink;
+    padding: 1%;
+    margin: 4%;
+    border-radius: 8%;
+}

@@ -1,0 +1,28 @@
+.itemP {
+    height: 30rem;
+  }
+  .itemP  img {
+    width: 100%;
+    object-fit: unset;
+    height: 29rem;
+    /* border-top-left-radius: 2%; */
+  }
+  
+  .caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+  }
+  
+  .caption h3 {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+  }
+
+@media screen and (max-width: 850px) {
+  .itemP {
+    height: 20em;
+  }
+  .itemP  img {
+    height: 20rem;
+  }
+}

@@ -1,4 +1,4 @@
-{
+[{
     "name": "macrame",
     "description": "Creado a mano",
     "price": 69,
@@ -6,3 +6,4 @@
     "stock": 69,
     "category": "macrame"
 }
+]

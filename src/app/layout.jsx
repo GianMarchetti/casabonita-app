@@ -1,5 +1,5 @@
-import { Providers }  from './providers'
 import './globals.css'
+import { Providers }  from './providers'
 import { Navigation } from './components/Navigation'
 import { Footer } from './components/Footer'
 import { Sansita } from 'next/font/google'

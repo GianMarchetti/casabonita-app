@@ -1,0 +1,30 @@
+
+    {
+        "items": {
+          "bootstrap": [
+            {
+              "id": 1,
+              "title": "Talleres presenciales Santa Fe",
+              "body": "Bootstrap Carousel Example",
+              "imageUrl": "https://i.ibb.co/N91ydLC/taller-Macrame.jpg",
+              "docs": "https://getbootstrap.com/docs/4.0/components/carousel/"
+            },
+            {
+              "id": 2,
+              "title": "Taller macramé virtual personalizado (1hs)",
+              "body": "Bootstrap Carousel Example",
+              "imageUrl": "https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg",
+              "docs": "https://getbootstrap.com/docs/4.0/components/carousel/"
+            },
+            {
+              "id": 3,
+              "title": "Talleres Macramé niveles 1, 2 y 3",
+              "body": "Bootstrap Carousel Example",
+              "imageUrl": "https://i.ibb.co/8PZP0H2/asesoria.jpg",
+              "docs": "https://getbootstrap.com/docs/4.0/components/carousel/"
+            }
+          ]
+        }
+      }
+     
+  

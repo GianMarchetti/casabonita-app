@@ -1,19 +1,20 @@
 .header {
     color: black;
     background-color: white;
-    /* box-shadow: 2px 0px 5px 0px black; */
-    box-shadow: 0px 7px 5px 2px rgba(0, 0, 0, 0.100);
-    text-align: center;
-    margin-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-shadow: 2px 0px 5px 0px black;
+    margin-bottom: 1em;    
     padding: 0%;
     position: fixed;
     width: 100%;
     top: -1vh;
-    z-index: 99;
+    z-index: 9999;
     padding: 1%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logoImg {
@@ -66,20 +67,31 @@
 .footer {
     color: black;
     background-color: white;
-    /* box-shadow: 0px -1px 5px 0px black; */
-    box-shadow: 0px -7px 5px 2px rgba(0, 0, 0, 0.100);
     text-align: center;
     margin-top: 2em;
-    padding: 4px;
-    bottom: -20;
-    position: absolute;
+    padding: 1.5%;
     width: 100%;
+    height: fit-content;
 }
 
 .redes {
     display: flex;
     flex-direction: column;
 }
+
+.footlist{
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    position: initial;
+}
+
+.footlist li{
+    height: fit-content;
+    color: black;
+}
+
 
 .aLink {
     font-family: monospace;
@@ -92,6 +104,7 @@
 
 .ig{
     display: inline;
+    margin-top: 1%;
 }
 
 .marquee{
@@ -110,11 +123,11 @@
         width: 100%;
         top: 0;
         z-index: 1;
+        /* opacity: 0.8; */
     }
     .logoImg{
         height: 6em;
         width: 6em;
-        /* margin-right: 25px; */
     }
     .cart{
         width: 55px;
@@ -137,15 +150,13 @@
         color: black;
     }
     .footer{
-        flex-direction: row;
-        position: fixed;
-        bottom: -1vh;
         width: 100%;
         padding: 1%;
-        z-index: 1000;
+    }
+    .footlist{
+        flex-direction: column;
     }
     .redes{
-        flex-direction: row;
         justify-content: center;
         padding: 2%;
     }
