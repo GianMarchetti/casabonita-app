@@ -15,24 +15,21 @@ interface Props {
 }
 
 export function ProductInfo({ product}: Props) {
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0])
-  // const { addItem, incrementItem, cartDetails } = useShoppingCart()
+  // const [selectedSize, setSelectedSize] = useState(product.sizes[0])
+  const { addItem, incrementItem, cartDetails } = useShoppingCart()
   const { toast } = useToast()
-  // const isInCart = !!cartDetails?.[product._id]
+  const isInCart = !!cartDetails?.[product._id]
 
   function addToCart() {
     const item = {
       ...product,
-      product_data: {
-        size: selectedSize
-      }
     }
     isInCart ? incrementItem(item._id) : addItem(item)
     toast({
-      title: `${item.name} (${getSizeName(selectedSize)})`,
+      title: `${item.name}`,
       description: "Product added to cart",
       action: (
-        <Link href='/cart'>
+        <Link href='/components/cart'>
           <Button variant="link" className="gap-x-2 whitespace-nowrap">
             <span>Open Cart</span>
             <ArrowRightCircleIcon className="h-5 w-5" />
@@ -56,27 +53,49 @@ export function ProductInfo({ product}: Props) {
         <div className="space-y-6 text-base">{product.description}</div>
       </div>
 
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <p>
           Size: <strong>{getSizeName(selectedSize)}</strong>
         </p>
         {product.sizes.map((size) => (
-          <Button onClick={() => setSelectedSize(size)} key={size} variant={selectedSize === size ? "default" : "outline"} className="mr-2 mt-4 w-30">
+          <Button onClick={() => setSelectedSize(size)} key={size} variant={selectedSize === size ? "default" : "outline"} className="mr-2 mt-4 w-fit bg-slate-400 hover:bg-white-200">
             {getSizeName(size)}
           </Button>
         ))}
-      </div>
+      </div> */}
 
       <form className="mt-6">
         <div className="mt-4 flex">
           <Button
             type="button"
             onClick={addToCart}
-            className="w-full bg-yellow-400 py-6 text-base font-medium hover:bg-gradient-to-tr from-yellow-200 to-yellow-400 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full bg-green-600 py-6 text-base font-medium hover:bg-gradient-to-tr from-green-200 to-green-400 text-black focus:outline-none focus:ring-2 focus:ring-white-200"
           >
-            Add to cart
+            Agregar al carrito
           </Button>
-        </div>
+        </div>        
+      </form>
+      <form className="mt-6">
+        <div className="mt-4 flex">
+          <Link href={'/components/cart'} className="w-full">
+            <Button
+              type="button"
+              className="w-full bg-yellow-400 py-6 text-base font-medium hover:bg-gradient-to-tr from-yellow-200 to-yellow-400 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            >
+              Ir al carrito
+            </Button>
+          </Link>
+        </div>        
+      </form>
+      <form className="mt-6">
+        <div className="mt-4 flex">
+          <Button
+              type="button"
+              className="w-full bg-indigo-400 py-6 text-base font-medium hover:bg-gradient-to-tr from-indigo-200 to-indigo-400 text-black focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            >
+              Comprar Ahora con MercadoPago
+            </Button>
+        </div>        
       </form>
     </div>
   )

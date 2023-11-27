@@ -4,15 +4,12 @@
 import NextImage from 'next/image'
 import Link from 'next/link'
 import styles from './home.module.css'
+import { Button, Image } from '@nextui-org/react';
 // import talleres from './assets/imgs/tallerPresencial.jpeg'
 // import macrame from './assets/imgs/macrame/MacraméXL.jpg'
 // import banner from './assets/imgs/tallerMacrame.jpg'
 // import macramev2 from 'https://i.ibb.co/vP0R91Z/Macrame-XL.jpg'
 // import macrameG from './assets/imgs/macrame/guirnaldaMacrame.jpeg'
-
-import { Button, Image } from '@nextui-org/react';
-// import { collection, addDoc, doc, getDoc, onSnapshot, query, querySnapshot } from "firebase/firestore"
-// import { db } from './firebase'
 
 
 import { client } from '../../sanity/lib/client'
@@ -29,53 +26,29 @@ import { cn } from '../../lib/utils'
 import { ProductGrid } from './components/product-grid';
 import { product } from '../../sanity/schemas/product-schema';
 
-// interface Props {
-//   searchParams: {
-//     date?: string
-//     price?: string
-//     color?: string
-//     category?: string
-//     size?: string
-//     search?: string
-//   }
-// }
 
-interface Props {
-  products: SanityProduct[]
-}
+const macrame = [
+  {
+    id: '1',
+    "name": "Guirnalda Macramé",
+    "price": "3000",
+    "image": "https://i.ibb.co/1dYP951/guirnalda-Macrame.jpg",
+  },
+  {
+    id: '2',
+    "name": "Macramé Boho",   
+    "price": "3000",
+    "image": "https://i.ibb.co/Dwj9tks/Macrame-xs.jpg",
+  },
+  {
+    id: '3',
+    "name": "Macramé Lelis",
+    "price": "3000",
+    "image": "https://i.ibb.co/vP0R91Z/Macrame-XL.jpg",
+  }
+]
 
-export default  function Page({products}: Props) {
-  // const { date = 'desc', price, color, category, size, search } = searchParams
-  // const priceOrder = price ? `| order(price ${price})` : ""
-  // const dateOrder = date ? `| order(_createdAt ${date})` : ""
-  // const order = `${priceOrder}${dateOrder}`
-
-  // const products = await client.fetch<SanityProduct[]>(
-  //   groq` ${order} {
-  //   _id,
-  //   _createdAt,
-  //   name,
-  //   sku,
-  //   images,
-  //   currency,
-  //   price,
-  //   description,
-  //   "slug": slug.current
-  // }`)
-//  console.log(products)
-
-// if (products.length === 0) {
-//   return (
-//     <div className="mx-auto grid h-40 w-full place-items-center rounded-md border-2 border-dashed bg-gray-50 py-10 text-center dark:bg-gray-900">
-//       <div>
-//         <XCircleIcon className="mx-auto h-10 w-10 text-gray-500 dark:text-gray-200" />
-//         <h1 className="mt-2 text-xl font-bold tracking-tight text-gray-500 dark:text-gray-200 sm:text-2xl">
-//           No products found
-//         </h1>
-//       </div>
-//     </div>
-//   )
-// }
+export default  function Page() {
 
   return (
     <main className={styles.main}>
@@ -91,15 +64,22 @@ export default  function Page({products}: Props) {
       <div className={styles.containerS}>
         <Link href={`/components/talleres`}>
           <div className={styles.slides}>
-            <Image as={NextImage} className={styles.iSlide} isZoomed src='https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg' width={300} height={500} alt='taller presencial' />
+            <Image 
+            as={NextImage} 
+            className={styles.iSlide} 
+            isZoomed 
+            src='https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg'
+             width={300} 
+             height={500} 
+             alt='taller presencial' />
             <h3 className={styles.tSlide}>Talleres</h3>
           </div>
         </Link>
 
-        <Link href={`/components/macrame`}>
+        <Link href={`/components/products`}>
           <div className={styles.slides}>
             <Image as={NextImage} className={styles.iSlide} isZoomed src='https://i.ibb.co/vP0R91Z/Macrame-XL.jpg' width={300} height={500} alt='macrame hecho a mano' />
-            <h3 className={styles.tSlide}>Macramé</h3>
+            <h3 className={styles.tSlide}>Macramés</h3>
           </div>
         </Link>
 
@@ -108,39 +88,35 @@ export default  function Page({products}: Props) {
 {/* ----------------------------------Productos------------------------------- */}
       <div>
 
-      <h2 className={styles.title}>Los mas Elegidos:</h2>
-
-      <Link href='/components/products/'>Products</Link>
+        <h2 className={styles.title}>Los mas Elegidos:</h2>
         
-          {/* <ProductGrid products={products} /> */}
-        {/* <div className={styles.layout}> */}
-      <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-3 lg:gap-x-8">
-          {/* {products.map((product) => (
-            <Link key={product._id} href={`/products/${product.slug}`} className="group text-sm">
-              <div className={styles.card} >
-              <div >
-                <Image
-                  as={NextImage}
-                  isZoomed
-                  placeholder="blur"
-                  blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(225, 280))}`}
-                  src={urlForImage(product.images[0]).url()}
-                  alt={product.name}
-                  width={225}
-                  height={280}
-                  className={styles.cardImg}
-                />
-              </div>
-              <div className={styles.cardBody}>
-                <h3 className={styles.cardTitle}>{product.name}</h3>
-                <p className={styles.cardPrice}>{formatCurrencyString({ currency: product.currency, value: product.price })}</p>
-                <Link key={product._id} href={`/products/${product.slug}`} className="group text-sm ">
-                  <Button color="warning" variant='bordered' className="text-black bg-amber-100 border-2 border-solid border-slate-300 hover:border-slate-500 rounded-2xl">Ver Mas</Button>
+        <div className={styles.layout}>
+          <div className={styles.cardLayout}>
+            {macrame.map((macrame, id) => (
+              <li
+                key={id}
+                className={styles.product}
+                >
+                <Link href={`/components/products/`} className={styles.cardBtn}>
+                  <div className={styles.card}>
+                      <Image as={NextImage} isZoomed src={macrame.image} width={400} height={800} alt="Macramé Producto comprable" className={styles.cardImg}/>
+                      <div className={styles.cardBody}>
+                        <h3 className={styles.cardTitle}>{macrame.name}</h3>
+                      </div>
+                  </div>
                 </Link>
-              </div>
-              </div>
-            </Link>
-          ))}  */}
+              </li>
+            ))}
+            
+          </div>
+          <Link href={`/components/products/`} className={styles.cardBtn}>
+          <Button
+            className="relative overflow-visible rounded-full hover:-translate-y-1 px-12 bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+            size="lg"
+            >
+            Ver mas
+          </Button>
+          </Link>
         </div>
 
       </div>
@@ -153,9 +129,6 @@ export default  function Page({products}: Props) {
           <p className={styles.asesoriasT}>Decoremos Juntas</p>
           <Link href={'/components/asesorias'}> 
           <Button
-            // rounded
-            disableRipple
-            
             className="relative overflow-visible rounded-full hover:-translate-y-1 px-12 bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
             size="lg"
             >

@@ -29,9 +29,9 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/app/layout.jsx",
-    "src/app/providers.jsx"
-, "src/app/api/hello/route.js"  ],
+    "src/app/layout.tsx",
+    "src/app/providers.tsx"
+, "src/app/api/hello/route.js", "src/app/components/asesorias/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

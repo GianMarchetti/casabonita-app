@@ -30,10 +30,10 @@ export default async function Page({ params }: Props) {
   // console.log(product)
 
   return (
-    <main className="mx-auto max-w-5xl sm:px-6 sm:pt-16 lg:px-8">
+    <main className="mx-auto max-w-5xl mb-32 sm:px-6 sm:pt-16 lg:px-8">
       <div className="mx-auto max-w-2xl lg:max-w-none">
         {/* Product */}
-        <div className="pb-20 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-12">
+        <div className="pb-20 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-12 md:p-8">
           {/* Product gallery */}
           <ProductGallery product={product} />
           {/* Product info */}

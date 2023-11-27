@@ -9,6 +9,6 @@ export const siteConfig = {
     { name: "Terminos & Condiciones", href: "#" },
     { name: "Politica de Envíos y Devoluciones", href: "#" },
     { name: "Politica de Privacidad", href: "#" },
-    { name: "FAQ", href: "#" },
+    { name: "Preguntas Frecuentes", href: "#" },
   ],
 }

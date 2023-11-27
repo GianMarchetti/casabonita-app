@@ -13,36 +13,11 @@ import { Checkbox } from "../components/ui/checkbox"
 const filters = [
   {
     id: "category",
-    name: "Category",
+    name: "Categorias",
     options: [
-      { value: "macrame", label: "macrame" },
-      { value: "belts", label: "Belts" },
-      { value: "gloves", label: "Gloves" },
-      { value: "scarves", label: "Scarves" },
-      { value: "wallets", label: "Wallets" },
-    ],
-  },
-  {
-    id: "size",
-    name: "Size",
-    options: [
-      { value: "xs", label: "X-Small" },
-      { value: "s", label: "Small" },
-      { value: "m", label: "Medium" },
-      { value: "l", label: "Large" },
-      { value: "xl", label: "X-Large" },
-      { value: "one-size", label: "One Size" },
-    ],
-  },
-  {
-    id: "color",
-    name: "Color",
-    options: [
-      { value: "black", label: "Black" },
-      { value: "beige", label: "Beige" },
-      { value: "brown", label: "Brown" },
-      { value: "green", label: "Green" },
-      { value: "yellow", label: "Yellow" },
+      { value: "macrame", label: "Macrame" },
+      { value: "taller", label: "Taller" },
+      { value: "asesoria", label: "Asesoria" },
     ],
   },
 ]
@@ -54,7 +29,7 @@ export function ProductFilters() {
 
   return (
     <form className="sticky top-20">
-      <h3 className="sr-only">Categories</h3>
+      <h3 className="sr-only">Categorias</h3>
 
       {filters.map((section, i) => (
         <Accordion key={i} type="single" collapsible>

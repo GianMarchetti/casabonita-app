@@ -33,29 +33,29 @@ export function ProductGrid({products}: Props) {
   return (
     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-3 lg:gap-x-8">
       {products.map((product) => (
-        <Link key={product._id} href={`/products/${product.slug}`} className="group text-sm">
+        <Link key={product._id} href={`/components/products/${product.slug}`} className="group text-sm w-fit">
           <div className={styles.card} >
-          <div >
-            <Image
-              as={NextImage}
-              isZoomed
-              placeholder="blur"
-              blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(225, 280))}`}
-              src={urlForImage(product.images[0]).url()}
-              alt={product.name}
-              width={225}
-              height={280}
-              className={styles.cardImg}
-            />
+            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg">
+              <Image
+                as={NextImage}
+                isZoomed
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(225, 280))}`}
+                src={urlForImage(product.images[0]).url()}
+                alt={product.name}
+                width={250}
+                height={280}
+                className={styles.cardImg}
+              />
+            </div>
+            <div className={styles.cardBody}>
+              <h3 className={styles.cardTitle}>{product.name}</h3>
+              <p className={styles.cardPrice}>{formatCurrencyString({ currency: product.currency, value: product.price })}</p>
+              <Link key={product._id} href={`/components/products/${product.slug}`} className={styles.cardBtn}>
+                <Button className="text-black bg-amber-100 border-2 hover:bg-amber-200 rounded-2xl">Ver Mas</Button>
+              </Link>
+            </div>
           </div>
-          <div className={styles.cardBody}>
-            <h3 className={styles.cardTitle}>{product.name}</h3>
-            <p className={styles.cardPrice}>{formatCurrencyString({ currency: product.currency, value: product.price })}</p>
-            <Link key={product._id} href={`/components/products/${product.slug}`} className="group text-sm ">
-              <Button color="warning" variant='bordered' className="text-black bg-amber-100 border-2 border-solid border-slate-300 hover:border-slate-500 rounded-2xl">Ver Mas</Button>
-            </Link>
-          </div>
-        </div>
         </Link>
       ))}
     </div>

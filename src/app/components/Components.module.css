@@ -92,28 +92,11 @@
     color: black;
 }
 
-
-.aLink {
-    font-family: monospace;
-    font-size: small;
-}
-
-.aLink :hover{
-    color: red;
-}
-
 .ig{
     display: inline;
     margin-top: 1%;
 }
 
-.marquee{
-    width: 100%;
-    height: 1,5em;
-    font-size: 2em;
-    font-weight: bolder;
-    font-family: 'Tilt Prism', cursive;
-}
 
 @media screen and (max-width: 850px) {
     .header{
@@ -154,7 +137,9 @@
         padding: 1%;
     }
     .footlist{
-        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: small;
     }
     .redes{
         justify-content: center;

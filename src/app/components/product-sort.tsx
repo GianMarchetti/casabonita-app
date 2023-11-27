@@ -22,9 +22,9 @@ import {
 import { ProductFilters } from "../components/product-filters"
 
 const sortOptions = [
-  { name: "Newest", value: "/?date=desc" },
-  { name: "Price, low to high", value: "/?price=asc" },
-  { name: "Price, high to low", value: "/?price=desc" },
+  { name: "Más nuevos", value: "/?date=desc" },
+  { name: "Precio, mínimo a máximo", value: "/?price=asc" },
+  { name: "Precio, máximo a mínimo", value: "/?price=desc" },
 ]
 
 export function ProductSort() {
@@ -34,7 +34,7 @@ export function ProductSort() {
     <div className="flex items-center">
       <Select onValueChange={(value) => router.replace(value)}>
         <SelectTrigger className="sm:w-[180px]">
-          <SelectValue placeholder="Sort By" />
+          <SelectValue placeholder="Ordenar por" />
         </SelectTrigger>
         <SelectContent className="bg-pink-100">
           {sortOptions.map(option => (
@@ -47,9 +47,9 @@ export function ProductSort() {
       <Sheet>
         <SheetContent className="w-[300px]">
           <SheetHeader>
-            <SheetTitle>Categories</SheetTitle>
+            <SheetTitle>Categorias</SheetTitle>
             <SheetDescription>
-              Narrow your product search using the options below.
+              Ordená la busqueda de tus productos usando las opciones debajo.
             </SheetDescription>
           </SheetHeader>
           <ProductFilters />

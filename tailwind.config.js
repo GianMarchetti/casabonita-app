@@ -15,7 +15,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {}
+      colors: {},
+      screens:{
+        'md': {'max': '767px'},
+      }
     },
   },
   darkMode: "class",

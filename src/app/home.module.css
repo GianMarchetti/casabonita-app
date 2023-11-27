@@ -2,7 +2,7 @@
     margin-top: 0%;
 }
 .banner{
-    background: black url("../app/assets/imgs/fondo.jpeg");
+    background: black url("../app/assets/imgs/bannerDeco3.jpg");
     /* background-image: url("../app/assets/imgs/banner.jpg"); */
     background-position: center;
     background-size: cover;
@@ -77,6 +77,12 @@
 
 .layout{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardLayout{
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -102,7 +108,7 @@
 
 .cardImg {
     width: 100;
-    height: 250px;
+    height: 500px;
     border-radius: 16px;
     z-index: 0;
 }
@@ -125,7 +131,7 @@
 }
 
 .cardBtn {
-        width: 80%;
+    width: fit-content;
 }
 
 .cardBtnVM {

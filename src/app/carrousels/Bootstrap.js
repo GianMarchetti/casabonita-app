@@ -16,7 +16,7 @@ export default function BootstrapCarousel() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
         {bootstrap.map((item) => (
         <Carousel.Item key={item.id} className={styles.itemP} interval={4000}>
-            <Image src={item.imageUrl} alt="slides" width={500} height={500} />
+            <Image src={item.imageUrl} alt="slides" width={400} height={500} />
             {/* <Carousel.Caption className={styles.caption}>
             <h3>{item.title}</h3>
             <p>{item.body}</p>

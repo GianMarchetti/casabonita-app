@@ -1,0 +1,24 @@
+
+    {
+        "items": {
+          "bootstrap": [
+            {
+              "id": 1,
+              "imageUrl": "https://i.ibb.co/SVYcNhs/taller-presencial2.jpg",
+              "docs": "https://getbootstrap.com/docs/4.0/components/carousel/"
+            },
+            {
+              "id": 2,
+              "imageUrl": "https://i.ibb.co/tJYLzJ0/taller-presencial4.jpg",
+              "docs": "https://getbootstrap.com/docs/4.0/components/carousel/"
+            },
+            {
+              "id": 3,
+              "imageUrl": "https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg",
+              "docs": "https://getbootstrap.com/docs/4.0/components/carousel/"
+            }
+          ]
+        }
+      }
+     
+  

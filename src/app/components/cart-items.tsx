@@ -16,8 +16,8 @@ import { CartItemsEmpty } from "../components/cart-items-empty"
 import { product } from "../../../sanity/schemas/product-schema"
 
 export function CartItems() {
-  // const { cartDetails, removeItem, setItemQuantity } = useShoppingCart()
-  // const cartItems = Object.entries(cartDetails!).map(([_, product]) => product)
+  const { cartDetails, removeItem, setItemQuantity } = useShoppingCart()
+  const cartItems = Object.entries(cartDetails!).map(([_, product]) => product)
   const {toast} = useToast()
 
   function removeCartItem(product: Product) {
@@ -29,15 +29,15 @@ export function CartItems() {
     })
   }
 
-  // if (cartItems.length === 0) return <CartItemsEmpty />
+  if (cartItems.length === 0) return <CartItemsEmpty />
 
   return (
     <ul
       role="list"
-      className="divide-y divide-gray-200 border-y border-gray-200 dark:divide-gray-500 dark:border-gray-500"
+      className="relative float-none w-fit h-fit top-0 divide-y divide-gray-200 border-y border-gray-200 rounded-md dark:divide-gray-500 dark:border-gray-500"
     >
-      {/* {cartItems.map((product, productIdx) => ( */}
-        <li key={product._id} className="flex py-6 sm:py-10">
+      {cartItems.map((product, productIdx) => (
+        <li key={product._id} className="flex h-fit py-6 sm:py-10">
           <div className="shrink-0">
             <Image
               placeholder="blur"
@@ -55,16 +55,13 @@ export function CartItems() {
               <div>
                 <div className="flex justify-between">
                   <h3 className="text-sm">
-                    <Link href={`/products/${product.slug}`} className="font-medium">
+                    <Link href={`/components/products/${product.slug}`} className="font-medium">
                       {product.name}
                     </Link>
                   </h3>
                 </div>
                 <p className="mt-1 text-sm font-medium">{formatCurrencyString({ value: product.price, currency: product.currency})}</p>
-                <p className="mt-1 text-sm font-medium">
-                  Size: {/* @ts-ignore */}
-                  <strong>{getSizeName(product.product_data?.size)}</strong>
-                </p>
+               
               </div>
 
               <div className="mt-4 sm:mt-0 sm:pr-9">
@@ -97,11 +94,11 @@ export function CartItems() {
 
             <p className="mt-4 flex space-x-2 text-sm">
               <ClockIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
-              <span>Ships in 1 week</span>
+              <span>Llega en 1 Semana</span>
             </p>
           </div>
         </li>
-      {/* ))} */}
+      ))} 
     </ul>
   )
 }

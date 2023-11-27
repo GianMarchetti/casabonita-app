@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
+import { Image } from "@nextui-org/react"
+import NextImage from 'next/image'
+
 import { urlForImage } from "../../../sanity/lib/image"
 
 import { SanityProduct } from "../../../config/inventory"
@@ -18,7 +20,7 @@ export function ProductGallery({ product }: Props) {
     <div className="flex flex-col-reverse">
       {/* Image Grid */}
       <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
-        <ul className="grid grid-cols-4 gap-6">
+        <ul className="grid grid-cols-4 gap-6 relative">
           {product.images.map((image, index) => (
             <div
               key={image._key as string}
@@ -27,10 +29,12 @@ export function ProductGallery({ product }: Props) {
             >
               <span className="absolute inset-0 overflow-hidden rounded-md">
                 <Image
+                  as={NextImage}
+                  priority
                   src={urlForImage(image).url()}
                   width={200}
                   height={200}
-                  alt=""
+                  alt={`${product.name}`}
                   className="h-full w-full object-cover object-center"
                   placeholder="blur"
                   blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(200, 200))}`}
@@ -49,6 +53,7 @@ export function ProductGallery({ product }: Props) {
       {/* Main Image */}
       <div className="aspect-h-1 aspect-w-1 w-full">
         <Image
+          as={NextImage}
           priority
           src={urlForImage(product.images[selectedImage]).url()}
           alt={`Main ${product.name} image`}
@@ -56,7 +61,7 @@ export function ProductGallery({ product }: Props) {
           height={750}
           placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 750))}`}
-          className="h-full w-full border-2 border-gray-200 object-cover object-center shadow-sm dark:border-gray-800 sm:rounded-lg"
+          className="h-full w-full z-0 border-2 border-amber-100 object-cover object-center shadow-sm dark:border-gray-800 sm:rounded-lg sm:pt-rem-2"
         />
       </div>
     </div>
