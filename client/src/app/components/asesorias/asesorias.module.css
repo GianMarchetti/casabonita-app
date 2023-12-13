@@ -1,0 +1,215 @@
+
+.mainAsesorias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+    height: 35em;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.container{
+    margin-top: 2%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding: 2%;
+    background-color: #fa8072;
+    color: beige;
+    font-size: larger;
+}
+
+.imgCol{
+    height: 30em;
+    width: 40em;
+    border: 0.5em solid white;
+    border-radius: 0%;
+}
+
+.row p{
+    text-align: start;
+    padding: 3%;
+}
+
+.row strong{
+    font-size: 32px;
+    text-shadow: 0px 4px 5px black;
+}
+
+.column {
+    width: 95%;
+}
+
+/* -----------------------consulta----------------- */
+
+.consulta{
+    display: flex;
+    justify-content: space-around;
+    height: 30em;
+    color: black;
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: rgb(250,128,114);
+    background: linear-gradient(140deg, rgba(250,128,114,1) 36%, rgba(255,255,255,1) 95%);
+}
+
+.contText{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    width: 50%;
+}
+
+.texto{
+    width: 80%;
+}
+
+.tittle{
+    font-size: 32px;
+}
+
+.boton{
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    width: 15em;
+}
+
+/* ---------------Cuadro------------------- */
+
+.contCuadro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgConsulta{
+    padding: 5%;
+    height: 25em;
+    width: 100%;
+    z-index: 0;
+    filter: drop-shadow(-2px 2px 2px black);
+}
+
+.instaBanner{
+    position: absolute;
+}
+
+.instaDiv{
+    display: flex;
+    align-items: center;
+    background-color: beige;
+    border-radius: 8px;
+    width: 70%;
+    padding: 2%;
+}
+
+.textoS{
+    color: #fa8072;
+    font-weight: 900;
+}
+
+/* ----------------valoraciones--------------------- */
+
+.containerClientes{
+    margin-top: 1em;
+    padding: 1%;
+    background-color: #fa8072;
+    width: 100%;
+    text-align: initial;
+}
+
+.containerClientes h2{
+    font-size: 32px;
+    text-align: center;
+}
+
+.valoraciones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    width: 100%;
+}
+
+.valoraciones > div{
+    width: 30%;
+}
+
+.client{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.valoraciones h3{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.valoraciones p{
+    font-size: 16px;
+    width: 100%;
+    color: pink;
+    background-color: beige;
+    margin-top: 8px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.imgValoraciones{
+    height: 30em;
+    width: 20em;
+    border: 5px solid beige;
+}
+
+@media screen and (max-width: 850px) {
+    .row{
+        flex-direction: column;
+        text-align: start;
+    }
+    .row2{
+        flex-direction: column-reverse;
+        text-align: start;
+    }
+    .imgCol{
+        height: 20em;
+    }
+    .consulta{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        padding: 3%;
+    }
+    .contText{
+        width: 100%;
+        align-items: center;
+    }
+    .boton{
+        margin-top: 2%;
+    }
+    .containerClientes{
+        height: fit-content;
+        margin-bottom: 10%;
+    }
+    .valoraciones{
+        flex-direction: column;
+    }
+    .valoraciones div{
+        width: 100%;
+        padding: 1%;
+    }
+
+
+}

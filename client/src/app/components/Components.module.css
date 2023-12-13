@@ -1,0 +1,151 @@
+.header {
+    color: black;
+    background-color: white;
+    box-shadow: 2px 0px 5px 0px black;
+    position: fixed;
+    width: 100%;
+    top: -1vh;
+    z-index: 9999;
+    padding: 1%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 8%;
+}
+.links{
+    display: flex;
+    align-items: baseline;
+}
+
+.dropDesk {
+    margin-top: 1em;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    height: fit-content;
+}
+
+.dropMob {
+    display: none;
+}
+
+.tienda{
+    font-weight: bold;
+}
+
+.Free {
+    color: magenta;
+    text-shadow: -2px 0px 4px magenta;
+    -webkit-text-stroke: mediumvioletred 0.8px;
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
+.cart{
+    width: 28px;
+    height: 32px;
+}
+
+.cart :hover {
+    width: 30px;
+    height: 35px;
+}
+
+.a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+.footer {
+    color: black;
+    background-color: white;
+    text-align: center;
+    margin-top: 2em;
+    padding: 16px;
+    width: 100%;
+    height: fit-content;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+}
+
+.footlist{
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    position: initial;
+}
+
+.footlist li{
+    height: fit-content;
+    color: black;
+}
+
+.ig{
+    display: inline;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .header{
+        padding: 0%;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .logoImg{
+        height: 6em;
+        width: 6em;
+    }
+    .cart{
+        width: 55px;
+        padding: 4%;
+    }
+    .dropDesk{
+        display: none;
+    }
+    .dropMob{
+        display: block;
+    }
+    .tienda{
+        color: black;
+    }
+    .footer{
+        width: 100%;
+        padding: 1%;
+    }
+    .footlist{
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: small;
+    }
+    .redes{
+        justify-content: center;
+        padding: 2%;
+    }
+    .ig{
+        margin-left: 2px;
+    }
+    .aLink{
+        display: none;
+    }
+}
