@@ -225,7 +225,7 @@ export function Navigation () {
             <Link href={`/components/contact`}>Contacto</Link>
             </div>
             <Link href={`/components/cart`} className='h-fit w-fit'>
-              <Button size='sm' className='bg-amber-100 lg:bg-transparent hover:bg-amber-100 sm:bg-amber-100'>
+              <Button size='sm' className='bg-amber-100 lg:bg-transparent hover:bg-amber-100 sm:bg-amber-100 h-fit w-fit ml-1'>
                 <span className="ml-1 text-sm font-bold text-black ">{cartCount}</span>
                 <ShoppingBagIcon className="h-6 w-6" />
               </Button>
