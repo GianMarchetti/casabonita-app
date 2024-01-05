@@ -1,4 +1,4 @@
-import '../../globals.css'
+
 import NextImage from 'next/image'
 import { Image, Button } from '@nextui-org/react';
 import BootstrapCarousel from '../../carrousels/Bootstrap'
@@ -51,7 +51,7 @@ export default async function Talleres(){
                     <p>Taller virtual personalizado, coordinamos una fecha y horario para que tengas una hora personal para que en este taller puedas aprender a hacer macramé</p>
                     <p>Precio: <strong>$5000</strong></p>
                     <Link 
-                      href='/components/products/taller-macram-virtual-personalizado-1hs' className={styles.cardBtn}>
+                      href='/components/products/taller-macram-personalizado' className={styles.cardBtn}>
                       <p>Ver Mas</p>
                       </Link>
                 </div>
@@ -64,7 +64,7 @@ export default async function Talleres(){
                     <p>Taller virtual, existen 3 niveles en este taller puedas aprender a hacer macramé</p>
                     <p>Precio: <strong>$5000</strong></p>
                     <Link 
-                      href='/components/products/taller-virtual-macram-niveles-1-2-y-3' className={styles.cardBtn}>
+                      href='/components/products/taller-virtual-macram' className={styles.cardBtn}>
                       <p>Ver Mas</p>
                       </Link>
                 </div>

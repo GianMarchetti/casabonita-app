@@ -6,9 +6,7 @@ import NextImage from 'next/image'
 import { Image, Button } from '@nextui-org/react';
 import { useRouter } from "next/navigation";
 
-import { ProductFilters } from "../../components/product-filters"
 import { ProductGrid } from "../../components/product-grid"
-import { ProductSort } from "../../components/product-sort"
 import { client } from '../../../../sanity/lib/client'
 import { groq } from 'next-sanity'
 
@@ -44,7 +42,6 @@ export default async function Products() {
                   <h3 className="text-xl font-bold tracking-tight sm:text-2xl">
                     {products.length} producto{products.length === 1 ? "" : "s"} disponible{products.length === 1 ? "" : "s"}
                   </h3>
-                  {/* <ProductSort /> */}
                 </div>
 
                 <section aria-labelledby="products-heading" className="pb-24 pt-6">
@@ -53,7 +50,6 @@ export default async function Products() {
                   </h2>
                   <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2", products.length > 0 ? 'lg:grid-cols' : 'lg:grid-cols-[1fr_2fr]')}>
                     <div className="hidden lg:block">
-                      {/* <ProductFilters /> */}
                     </div>
                     <ProductGrid products={products}/>
                   </div>
