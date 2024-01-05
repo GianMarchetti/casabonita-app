@@ -9,3 +9,6 @@ import mercadopago from "../../server/src/router/Mercado_Pago_Router"
 export const MP = mercadopago.configure({
   access_token: process.env.MERCADOPAGO_ACCESS_TOKEN!,
 })
+
+// import { initMercadoPago } from '@mercadopago/sdk-react'
+// initMercadoPago('MERCADOPAGO_ACCESS_TOKEN!');

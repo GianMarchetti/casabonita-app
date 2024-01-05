@@ -3,11 +3,12 @@
 import { useState } from "react"
 
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
-import { ClockIcon } from "lucide-react"
+import { ClockIcon, MessageCircle } from "lucide-react"
 
 import { Button } from "../components/ui/button"
 import axios from "axios"
 import { Loader2 } from "lucide-react"
+import Link from "next/link"
 import { Product } from "use-shopping-cart/core"
 
 export function CartSummary() {
@@ -60,9 +61,14 @@ export function CartSummary() {
           <dd className="text-sm font-medium">{formattedTotalPrice}</dd>
         </div>
         <div className="flex flex-col items-start justify-between border-t border-gray-200 pt-4 dark:border-gray-600 sm:flex-row">
-          <p className="mt-4 flex space-x-2 text-sm">
-            <span>Arreglar Envio por WhastApp</span>
-            <ClockIcon className="h-5 w-5 shrink-0 text-green-600" aria-hidden="true" />
+          <p className="mt-4 flex space-x-2 text-sm text-left">
+            <span>En caso de necesitar envio
+              <ClockIcon className="h-5 w-5 ml-1 mr-1 shrink-0 text-green-600 inline-block" aria-hidden="true" />
+              comunicarse a 
+              <Link href="https://wa.link/duppll" className="ml-1">
+                 WhastApp<MessageCircle className="h-5 w-5 shrink-0 text-green-600 inline-block" aria-hidden="true" />
+              </Link>
+            </span>
           </p>
         </div>
         {/* <div className="flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-600">
@@ -92,7 +98,7 @@ export function CartSummary() {
               onClick={() => Comprar(product)}
               type="button"
               disabled={isDisabled}
-              className="w-full bg-indigo-400 py-6 text-base font-medium hover:bg-gradient-to-tr from-indigo-200 to-indigo-600 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full bg-indigo-500 py-6 text-base font-medium hover:bg-gradient-to-tr from-indigo-300 to-indigo-600 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
               {isLoading ? "Loading..." : "MercadoPago"}

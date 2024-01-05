@@ -34,7 +34,7 @@
     "src/app/providers.tsx",
     "src/app/api/hello/route.js",
     "src/app/components/asesorias/page.jsx"
-  ],
+, "src/app/api/mercadopago.js"  ],
   "exclude": [
     "node_modules"
   ]

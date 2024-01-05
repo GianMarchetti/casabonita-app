@@ -2,6 +2,7 @@ import styles from './Components.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '../../../config/site'
+import { InstagramIcon } from "lucide-react"
 
 export function Footer () {
   return (
@@ -13,7 +14,7 @@ export function Footer () {
           <p className="border-b border-gray-200">Casa Bonita</p>
 
           <Link href='https://www.instagram.com/yas.casabonita/'> 
-            <Image src='https://i.ibb.co/k6j3Lkj/insta.png' alt='icono de Instagram' width={25} height={25} className={styles.ig} />
+            <InstagramIcon width={25} height={25} className={styles.ig} />
           </Link>
 
           <ul className={styles.footlist}>

@@ -62,20 +62,29 @@ export default  function Page() {
         <Link href={`/components/talleres`}>
           <div className={styles.slides}>
             <Image 
-            as={NextImage} 
-            className={styles.iSlide} 
-            isZoomed 
-            src='https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg'
-             width={300} 
-             height={500} 
-             alt='taller presencial' />
+              as={NextImage} 
+              className={styles.iSlide} 
+              isZoomed 
+              src='https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg'
+              width={300} 
+              height={500} 
+              alt='taller presencial' 
+            />
             <h3 className={styles.tSlide}>Talleres</h3>
           </div>
         </Link>
 
         <Link href={`/components/macrame`}>
           <div className={styles.slides}>
-            <Image as={NextImage} className={styles.iSlide} isZoomed src='https://i.ibb.co/vP0R91Z/Macrame-XL.jpg' width={300} height={500} alt='macrame hecho a mano' />
+            <Image 
+              as={NextImage} 
+              className={styles.iSlide} 
+              isZoomed 
+              src='https://i.ibb.co/vP0R91Z/Macrame-XL.jpg' 
+              width={300} 
+              height={500} 
+              alt='macrame hecho a mano' 
+            />
             <h3 className={styles.tSlide}>Macramés</h3>
           </div>
         </Link>
