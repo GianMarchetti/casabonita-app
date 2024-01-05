@@ -21,40 +21,40 @@ const Big = Big_Shoulders_Display({
 
 const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
-// function useMenuAnimation(isOpen : boolean) {
-//   const [scope, animate] = useAnimate();
+function useMenuAnimation(isOpen : boolean) {
+  const [scope, animate] = useAnimate();
 
-//   useEffect(() => {
-//     animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
+  useEffect(() => {
+    animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
 
-//     animate(
-//       "ul",
-//       {
-//         clipPath: isOpen
-//           ? "inset(0% 0% 0% 0% round 10px)"
-//           : "inset(10% 50% 90% 50% round 10px)"
-//       },
-//       {
-//         type: "spring",
-//         bounce: 0,
-//         duration: 0.5
-//       }
-//     );
+    animate(
+      "ul",
+      {
+        clipPath: isOpen
+          ? "inset(0% 0% 0% 0% round 10px)"
+          : "inset(10% 50% 90% 50% round 10px)"
+      },
+      {
+        type: "spring",
+        bounce: 0,
+        duration: 0.5
+      }
+    );
 
-//     animate(
-//       "li",
-//       isOpen
-//         ? { opacity: 1, scale: 1, filter: "blur(0px)" }
-//         : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
-//       {
-//         duration: 0.2,
-//         delay: isOpen ? staggerMenuItems : 0
-//       }
-//     );
-//   }, [isOpen]);
+    animate(
+      "li",
+      isOpen
+        ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+        : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+      {
+        duration: 0.2,
+        delay: isOpen ? staggerMenuItems : 0
+      }
+    );
+  }, [isOpen]);
 
-//   return scope;
-// }
+  return scope;
+}
 
 const linksDesk = [{
   label: 'Macramé',
@@ -67,40 +67,40 @@ const linksDesk = [{
     route: '/components/talleres'
 }]
 
-// function useMenuAnimationMob(isOpen : boolean) {
-//   const [scopeMob, animateMob] = useAnimate();
+function useMenuAnimationMob(isOpen : boolean) {
+  const [scopeMob, animateMob] = useAnimate();
 
-//   useEffect(() => {
-//     animateMob(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
+  useEffect(() => {
+    animateMob(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
 
-//     animateMob(
-//       "ul",
-//       {
-//         clipPath: isOpen
-//           ? "inset(0% 0% 0% 0% round 10px)"
-//           : "inset(10% 50% 90% 50% round 10px)"
-//       },
-//       {
-//         type: "spring",
-//         bounce: 0,
-//         duration: 0.5
-//       }
-//     );
+    animateMob(
+      "ul",
+      {
+        clipPath: isOpen
+          ? "inset(0% 0% 0% 0% round 10px)"
+          : "inset(10% 50% 90% 50% round 10px)"
+      },
+      {
+        type: "spring",
+        bounce: 0,
+        duration: 0.5
+      }
+    );
 
-//     animateMob(
-//       "li",
-//       isOpen
-//         ? { opacity: 1, scale: 1, filter: "blur(0px)" }
-//         : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
-//       {
-//         duration: 0.2,
-//         delay: isOpen ? staggerMenuItems : 0
-//       }
-//     );
-//   }, [isOpen]);
+    animateMob(
+      "li",
+      isOpen
+        ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+        : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+      {
+        duration: 0.2,
+        delay: isOpen ? staggerMenuItems : 0
+      }
+    );
+  }, [isOpen]);
 
-//   return scopeMob;
-// }
+  return scopeMob;
+}
 
 const linksMob = [
   {
@@ -136,8 +136,8 @@ const linksMob = [
 export function Navigation () {
   const { cartCount } = useShoppingCart()
   const [isOpen, setIsOpen] = useState(false);
-  // const scope = useMenuAnimation(isOpen);  
-  // const scopeMob = useMenuAnimationMob(isOpen);  
+  const scope = useMenuAnimation(isOpen);  
+  const scopeMob = useMenuAnimationMob(isOpen);  
   const pathname = usePathname()
 
   if (pathname.startsWith('/studio')) return null
@@ -156,8 +156,7 @@ export function Navigation () {
 
           <div className={styles.dropDesk}>
             <Link href={`/`} >Inicio</Link>
-            <Link href={`/components/products/`} >p</Link>
-            {/* <div className="menu" ref={scope} >
+            <div className="menu" ref={scope} >
             <motion.button 
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setIsOpen(!isOpen)}
@@ -180,7 +179,7 @@ export function Navigation () {
                 </li>
               ))}
             </ul>{" "}
-            </div> */}
+            </div>
             <Link href={`/components/guias`}> <span>Guias</span><span className={styles.Free}><p className={Big.className}>GRATIS</p></span></Link>
             <Link href={`https://www.instagram.com/yas.casabonita/`}>Blog</Link>
             <Link href={`/components/contact`}>Contacto</Link>
@@ -190,19 +189,19 @@ export function Navigation () {
                 <ShoppingBagIcon className="h-6 w-6" />
               </Button>
             </Link>
-            {process.env.NODE_ENV === 'development' && (
+            {/* {process.env.NODE_ENV === 'development' && (
             <Link href='/studio'>
               <Button size='sm' variant='ghost'>
                 <PencilSquareIcon className='h-5 w-5' />
               </Button>
             </Link>
-          )}
+          )} */}
           </div>
 
 {/*---------------------- Menu Mobile ------------------------------------*/}
 
           <div className={styles.dropMob}>
-            {/* <div className="menu" ref={scopeMob} >
+            <div className="menu" ref={scopeMob} >
             <motion.button 
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setIsOpen(!isOpen)}
@@ -225,7 +224,7 @@ export function Navigation () {
                       </li>
                     ))}
                     </ul>{" "}
-            </div> */}
+            </div>
             <Link href='/' className={styles.logoMob}><Image priority alt='Logo de Casa Bonita' src={Logo} className={styles.logoImg} width={200} height={200}/></Link>
             <Link href={`/cart`}><ShoppingBagIcon className="h-6 w-6" /></Link>
           </div>
