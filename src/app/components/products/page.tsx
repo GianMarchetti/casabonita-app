@@ -45,7 +45,7 @@ export default async function Products() {
                   <h3 className="text-xl font-bold tracking-tight sm:text-2xl">
                     {products.length} producto{products.length === 1 ? "" : "s"} disponible{products.length === 1 ? "" : "s"}
                   </h3>
-                  <ProductSort />
+                  {/* <ProductSort /> */}
                 </div>
 
                 <section aria-labelledby="products-heading" className="pb-24 pt-6">
@@ -54,7 +54,7 @@ export default async function Products() {
                   </h2>
                   <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2", products.length > 0 ? 'lg:grid-cols' : 'lg:grid-cols-[1fr_2fr]')}>
                     <div className="hidden lg:block">
-                      <ProductFilters />
+                      {/* <ProductFilters /> */}
                     </div>
                     <ProductGrid products={products}/>
                   </div>

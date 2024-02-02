@@ -50,7 +50,7 @@ export default function contacto(){
                         <p className={styles.texto}>Si soñas con un hogar único y lleno de amor... estoy aquí para ayudarte a hacerlo realidad! Contame qué ambiente de tu casa querés renovar</p>
                         <h2 className={styles.tittle}>Recibir tu consulta me pone feliz!</h2>
                         <Link href='https://wa.link/7bzsei' className={styles.boton}><Button radius="full" className="bg-gradient-to-tr from-pink-500 to-salmon-500 text-black shadow-lg">Consultar</Button></Link>
-                        <Link href='/components/products/asesoria' className={styles.boton}><Button radius="full" className="bg-gradient-to-tr from-pink-500 to-salmon-500 text-black shadow-lg">Conseguir mi Asesoria</Button></Link>
+                        <Link href='/components/products/asesoria-de-decoracion' className={styles.boton}><Button radius="full" className="bg-gradient-to-tr from-pink-500 to-salmon-500 text-black shadow-lg">Conseguir mi Asesoria</Button></Link>
                     </div>
                     <div className={styles.contCuadro}>
                         <Image 
