@@ -190,7 +190,7 @@ export const inventory: InventoryProduct[] = [
     id: "l2d8xkm0kn-x4isj9s87q-dqgj1jrmzx",
     sku: "Taller_macramé_virtual_personalizado",
     name: "Taller Macramé personalizado",
-    description: "Taller virtual personalizado, coordinamos una fecha y horario para que tengas una hora personal para que en este taller puedas aprender a hacer macramé",
+    description: "Taller virtual personalizado, coordinamos una fecha y horario para que tengas una hora personal.",
     price: 500000,
     image: "https://i.ibb.co/8PZP0H2/asesoria.jpg",
     images: [

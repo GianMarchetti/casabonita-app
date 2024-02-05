@@ -1,364 +1,363 @@
 .main{
-    margin-top: 0%;
-}
-.banner{
-    background: black url("../app/assets/imgs/bannerDeco3.jpg");
-    /* background-image: url("../app/assets/imgs/banner.jpg"); */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* opacity: 0.8; */
-    filter: opacity(80%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 82em;
-    margin-bottom: 5%;
-    z-index: 0;
-}
-
-.title{
+        margin-top: 0%;
+    }
+    .banner{
+        background: black url("../app/assets/imgs/bannerDeco3.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: opacity(80%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 82em;
+        margin-bottom: 5%;
+        z-index: 0;
+    }
+    
+    .title{
         -webkit-animation: bounce-in-bck 1.3s both;
         animation: bounce-in-bck 1.3s both;
-}
-
-.textBanner{
-    color: pink;
-    font-size: 24px;
-    text-shadow: 2px 2px 2px black;
-    -webkit-animation: text-focus-in 1.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: text-focus-in 1.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-/* ------------------------------Slides-------------------- */
-
-.containerS{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 4%;
-    z-index: 0;
-}
-
-.slides{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 4%;
-}
-
-.slides :hover{
-    transform: scale(1.1);
-    box-shadow: -5px 7px 4px rgba(39, 39, 39, 0.486),
-    6px  7px 4px rgba(255, 255, 255, 0.158),
-    inset   0  0 .5em rgba(175, 162, 162, 0.384) ;
-}
-
-.slides .tSlide:hover {
-    box-shadow: none;
-}
-.iSlide{
-    height: 500px;
-    width: 300px;
-    filter: blur(4px);
-    border-radius: 4%;
-    box-shadow: 0px 1px 4px 0px black;
-}
-
-.tSlide{
-    position: absolute;
-    font-size: 24px;
-    z-index: 99;
-}
-
-/* --------------------------Cards------------------------ */
-
-.layout{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cardLayout{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product{
-    height: fit-content;
-    margin-bottom: 2%;
-}
-
-.card{
-    background-color: #fff;
-    color: #698b22;
-    border-radius: 24px;
-    padding : 8px;
-    width: 20em;
-    font-size:.9em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align:center;
-    color: black;
-}
-
-.cardImg {
-    width: 100;
-    height: 500px;
-    border-radius: 16px;
-    z-index: 0;
-}
-
-.cardBody{
+    }
+    
+    .textBanner{
+        color: pink;
+        font-size: 24px;
+        text-shadow: 2px 2px 2px black;
+        -webkit-animation: text-focus-in 1.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 1.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    
+    /* ------------------------------Slides-------------------- */
+    
+    .containerS{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 4%;
+        z-index: 0;
+    }
+    
+    .slides{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 4%;
+    }
+    
+    .slides :hover{
+        transform: scale(1.1);
+        box-shadow: -5px 7px 4px rgba(39, 39, 39, 0.486),
+        6px  7px 4px rgba(255, 255, 255, 0.158),
+        inset   0  0 .5em rgba(175, 162, 162, 0.384) ;
+    }
+    
+    .slides .tSlide:hover {
+        box-shadow: none;
+    }
+    .iSlide{
+        height: 500px;
+        width: 300px;
+        filter: blur(4px);
+        border-radius: 4%;
+        box-shadow: 0px 1px 4px 0px black;
+    }
+    
+    .tSlide{
+        position: absolute;
+        font-size: 24px;
+        z-index: 99;
+    }
+    
+    /* --------------------------Cards------------------------ */
+    
+    .layout{
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        width: 100%;
-}
-
-.cardTitle{
-    font-size: 18px;
-}
-
-.cardPrice {
-    font-style: italic;
-    padding: 3%;
-}
-
-.cardBtn {
-    width: fit-content;
-}
-
-.cardBtnVM {
-    background-color: beige;
-    font-size: 14px;
-    border: 1px solid black;
-}
-
-/* -------------------------------------Asesorias-------------------------------------------------- */
-
-.asesorias{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 45em;
-}
-
-.asesoriasD{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 30em;
-    width: 100%;
-    background-image: url(./assets/imgs/decoremos1.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.asesoriasT {
-    font-size: 45px;
-    font-weight: bolder;
-}
-
-.asesoriasT2 {
-    font-size: 18px;
-    font-weight: bolder;
-}
-
-.asesoBtn {
-    margin: 4%;
-}
-
-/**--------------------------------------- animaciones------------------------------------------ */
-
-@-webkit-keyframes bounce-in-bck {
-    0% {
-      -webkit-transform: scale(7);
-              transform: scale(7);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      opacity: 0;
     }
-    38% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      opacity: 1;
+    
+    .cardLayout{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    55% {
-      -webkit-transform: scale(1.5);
-              transform: scale(1.5);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
+    
+    .product{
+        height: fit-content;
+        margin-bottom: 2%;
     }
-    72% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
+    
+    .card{
+        background-color: #fff;
+        color: #698b22;
+        border-radius: 24px;
+        padding : 8px;
+        width: 20em;
+        font-size:.9em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+        color: black;
     }
-    81% {
-      -webkit-transform: scale(1.24);
-              transform: scale(1.24);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
+    
+    .cardImg {
+        width: 100;
+        height: 500px;
+        border-radius: 16px;
+        z-index: 0;
     }
-    89% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    95% {
-      -webkit-transform: scale(1.04);
-              transform: scale(1.04);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
-  @keyframes bounce-in-bck {
-    0% {
-      -webkit-transform: scale(7);
-              transform: scale(7);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    38% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55% {
-      -webkit-transform: scale(1.5);
-              transform: scale(1.5);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    72% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    81% {
-      -webkit-transform: scale(1.24);
-              transform: scale(1.24);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    89% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    95% {
-      -webkit-transform: scale(1.04);
-              transform: scale(1.04);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
-
-  @-webkit-keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  
-
-/*? --------------------------------------media querys---------------------------------  */
-
-@media screen and (max-width: 850px) {
-        .main{
-            margin-top: 0%;
-        }
-        .banner{
-        background-image: url("../app/assets/imgs/asesoria2.jpg");
-        background-position: center;
-        background-size: cover;
-        height: 40em;
-        }
-        .containerS{
-            align-items: center;
+    
+    .cardBody{
+            display: flex;
             flex-direction: column;
-        }
-
-        .slides{
-            margin-bottom: 10%;
-        }
-
-        .card{
-                font-size: .8em;
-        }
-
-        .asesorias{
-            height: 30em;
-            justify-content: start;
-        }
-
-        .asesoriasD {
-            height: 25em;
-            align-items: stretch;
-            background-size: 200%;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .asesoriasT {
-            font-size: 30px;
-        }
-
-        .asesoBtn {
-            height: 10%;
-        }
-}
-
-@media screen and (min-width: 1500px) {
-    .asesoImg {
-        height: 40em;
+            align-items: center;
+            text-align: center;
+            width: 100%;
     }
-}
+    
+    .cardTitle{
+        font-size: 18px;
+    }
+    
+    .cardPrice {
+        font-style: italic;
+        padding: 3%;
+    }
+    
+    .cardBtn {
+        width: fit-content;
+    }
+    
+    .cardBtnVM {
+        background-color: beige;
+        font-size: 14px;
+        border: 1px solid black;
+    }
+    
+    /* -------------------------------------Asesorias-------------------------------------------------- */
+    
+    .asesorias{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 45em;
+    }
+    
+    .asesoriasD{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 30em;
+        width: 100%;
+        background-image: url(./assets/imgs/decoremos1.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .asesoriasT {
+        font-size: 45px;
+        font-weight: bolder;
+    }
+    
+    .asesoriasT2 {
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    
+    .asesoBtn {
+        margin: 4%;
+    }
+    
+    /**--------------------------------------- animaciones------------------------------------------ */
+    
+    @-webkit-keyframes bounce-in-bck {
+        0% {
+          -webkit-transform: scale(7);
+                  transform: scale(7);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+          opacity: 0;
+        }
+        38% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+          opacity: 1;
+        }
+        55% {
+          -webkit-transform: scale(1.5);
+                  transform: scale(1.5);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+        }
+        72% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+        }
+        81% {
+          -webkit-transform: scale(1.24);
+                  transform: scale(1.24);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+        }
+        89% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+        }
+        95% {
+          -webkit-transform: scale(1.04);
+                  transform: scale(1.04);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+        }
+      }
+      @keyframes bounce-in-bck {
+        0% {
+          -webkit-transform: scale(7);
+                  transform: scale(7);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+          opacity: 0;
+        }
+        38% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+          opacity: 1;
+        }
+        55% {
+          -webkit-transform: scale(1.5);
+                  transform: scale(1.5);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+        }
+        72% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+        }
+        81% {
+          -webkit-transform: scale(1.24);
+                  transform: scale(1.24);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+        }
+        89% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+        }
+        95% {
+          -webkit-transform: scale(1.04);
+                  transform: scale(1.04);
+          -webkit-animation-timing-function: ease-in;
+                  animation-timing-function: ease-in;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          -webkit-animation-timing-function: ease-out;
+                  animation-timing-function: ease-out;
+        }
+      }
+    
+      @-webkit-keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      
+    
+    /*? --------------------------------------media querys---------------------------------  */
+    
+    @media screen and (max-width: 850px) {
+            .main{
+                margin-top: 0%;
+            }
+            .banner{
+            background-image: url("../app/assets/imgs/asesoria2.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 40em;
+            }
+            .containerS{
+                align-items: center;
+                flex-direction: column;
+            }
+    
+            .slides{
+                margin-bottom: 10%;
+            }
+    
+            .card{
+                    font-size: .8em;
+            }
+    
+            .asesorias{
+                height: 30em;
+                justify-content: start;
+            }
+    
+            .asesoriasD {
+                height: 25em;
+                align-items: stretch;
+                background-size: 200%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+    
+            .asesoriasT {
+                font-size: 30px;
+            }
+    
+            .asesoBtn {
+                height: 10%;
+            }
+    }
+    
+    @media screen and (min-width: 1500px) {
+        .asesoImg {
+            height: 40em;
+        }
+    }
+    

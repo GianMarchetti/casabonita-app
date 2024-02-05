@@ -31,7 +31,7 @@ export function ProductGrid({products}: Props) {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-3 lg:gap-x-8">
+    <div className="grid grid-cols-1 gap-x-6 gap-y-10 justify-items-center lg:grid-cols-3 sm:grid-cols-2 lg:col-span-3 lg:gap-x-40">
       {products.map((product) => (
         <Link key={product._id} href={`/components/products/${product.slug}`} className="group text-sm w-fit">
           <div className={styles.card} >

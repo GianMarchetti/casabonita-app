@@ -3,6 +3,8 @@ import styles from './asesorias.module.css'
 import NextImage from 'next/image'
 import {Button, Image} from "@nextui-org/react";
 import Link from 'next/link'
+import { User } from 'lucide-react';
+import { UserCircleIcon } from '@heroicons/react/24/solid';
 
 export default function contacto(){
     return(
@@ -50,7 +52,9 @@ export default function contacto(){
                         <p className={styles.texto}>Si soñas con un hogar único y lleno de amor... estoy aquí para ayudarte a hacerlo realidad! Contame qué ambiente de tu casa querés renovar</p>
                         <h2 className={styles.tittle}>Recibir tu consulta me pone feliz!</h2>
                         <Link href='https://wa.link/7bzsei' className={styles.boton}><Button radius="full" className="bg-gradient-to-tr from-pink-500 to-salmon-500 text-black shadow-lg">Consultar</Button></Link>
+                        
                         <Link href='/components/products/asesoria-de-decoracion' className={styles.boton}><Button radius="full" className="bg-gradient-to-tr from-pink-500 to-salmon-500 text-black shadow-lg">Conseguir mi Asesoria</Button></Link>
+
                     </div>
                     <div className={styles.contCuadro}>
                         <Image 
@@ -95,8 +99,11 @@ export default function contacto(){
                                 className={styles.imgValoraciones}
                             />
                         </div>
-                        <h3>Graciela</h3>
-                        <p>Desde ya superagradecida por tan excelente asesoramiento. Todo muy detallado, muy amable y amorosa en todo momento incluso en la conexion por meet. La superpaciencia y una atenta escucha a efectos de dar una certera opinion o respuesta. Muy feliz de haberme puesto en contacto con vos. Ahora queda por mi parte plasmar en la practica lo transmitido. 🙏 te reagradezco</p>
+                        <div className={styles.client}>
+                            <UserCircleIcon className='w-10 h-10' />
+                            <h3>Graciela</h3>
+                        </div>
+                        <p>Desde ya superagradecida por tan excelente asesoramiento. Todo muy detallado, muy amable y amorosa en todo momento incluso en la conexion por meet. La superpaciencia y una atenta escucha a efectos de dar una certera opinion o respuesta. Muy feliz de haberme puesto en contacto con vos. Ahora queda por mi parte plasmar en la practica lo transmitido. Te reagradezco 🙏🙏</p>
                     </div>
                     <div>
                         <div className='flex flex-row bg-yellow-50 border rounded-lg'>
@@ -117,7 +124,10 @@ export default function contacto(){
                                 className={styles.imgValoraciones}
                             />
                         </div>
-                        <h3>Susana</h3>
+                        <div className={styles.client}>
+                            <UserCircleIcon className='w-10 h-10' />
+                            <h3>Susana</h3>
+                        </div>
                         <p>Desde hace muchos años que quiero dejar mi casa tan bonita como se ve en pinterest y te encontré sin querer en instagram, fué una alegría para mí saber que podía al fin hacer los cambios que necesitaba acompañada con vos que haces todo tan fácil. Aún estoy en el proceso de cambio, aunque ya me entregaste el proyecto seguis acompañandome en la ejecución y eso es lo que más valoro. Muchas gracias por tu predisposición!!!! Encantada con tus ideas 😍😍</p>
                     </div>
                     <div>
@@ -139,7 +149,10 @@ export default function contacto(){
                                 className={styles.imgValoraciones}
                             />
                         </div>
-                        <h3>Caro</h3>
+                        <div className={styles.client}>
+                            <UserCircleIcon className='w-10 h-10' />
+                            <h3>Caro</h3>
+                        </div>
                         <p>Hola, en cuanto a mi devolución de tu trabajo la verdad que quedé contestísima!!! Nos te gustó todo lo que nos propusiste cada una de las ideas que nos mandaste, de los links, nos re sirvio!!! hemos mirado todo, todavía no hemos puesto en práctica mucho pero la verdad que tu predisposición fue divina nos sentimos muy a gusto, muy cómodos con tu trabajo!! Asi que estamos muy contentos!! Gracias miles!!!🥰</p>
                     </div>
                 </div>

@@ -2,8 +2,6 @@
     color: black;
     background-color: white;
     box-shadow: 2px 0px 5px 0px black;
-    margin-bottom: 1em;    
-    padding: 0%;
     position: fixed;
     width: 100%;
     top: -1vh;
@@ -22,6 +20,10 @@
     height: 150px;
     border-radius: 8%;
 }
+.links{
+    display: flex;
+    align-items: baseline;
+}
 
 .dropDesk {
     margin-top: 1em;
@@ -31,6 +33,7 @@
     align-items: center;
     gap: 32px;
     list-style: none;
+    height: fit-content;
 }
 
 .dropMob {
@@ -69,7 +72,7 @@
     background-color: white;
     text-align: center;
     margin-top: 2em;
-    padding: 1.5%;
+    padding: 16px;
     width: 100%;
     height: fit-content;
 }
@@ -94,19 +97,20 @@
 
 .ig{
     display: inline;
-    margin-top: 1%;
+    margin-top: 10px;
 }
 
 
 @media screen and (max-width: 850px) {
     .header{
         padding: 0%;
-        display: block;
         position: fixed;
         width: 100%;
         top: 0;
-        z-index: 1;
-        /* opacity: 0.8; */
+    }
+    .nav{
+        flex-direction: row;
+        justify-content: space-around;
     }
     .logoImg{
         height: 6em;
@@ -116,18 +120,11 @@
         width: 55px;
         padding: 4%;
     }
-    .logoDesk{
-        display: none;
-    }
     .dropDesk{
         display: none;
     }
     .dropMob{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        display: block;
     }
     .tienda{
         color: black;

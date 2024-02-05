@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
-import {  CheckCircleIcon } from '@heroicons/react/24/solid'
 import { Check } from "lucide-react"
 
 

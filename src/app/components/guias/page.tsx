@@ -21,40 +21,40 @@ export default function contacto(){
 
             <div className={styles.container}>
                     <div className={styles.cardMain}>
-                        <Image src={Deco} className={styles.imgMain} alt="img deco" />
+                        <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.imgMain} alt="img deco" />
                         <p className={styles.cardTextMain}>Deco Habitación</p>
                         <div className={styles.divider}></div>
-                        <a href='/' className={styles.cardVMMain}>
+                        <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.cardVMMain}>
                             <p >Ver Mas</p>
-                        </a>
+                        </Link>
                     </div>
                     <div className={styles.galleryCard}>
 
                         <div className={styles.card}>
-                                <Image src={Deco} className={styles.cardImg} alt="img deco"/> 
+                                <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.cardImg} alt="img deco"/> 
                                 <p className={styles.cardText}>Deco Habitación</p>
                             <div className={styles.cardBtn}>
-                                <a href='./decoracionHabitacion' className={styles.cardVerMas}>
+                                <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.cardVerMas}>
                                     <p>Ver Mas</p>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className={styles.card}>
-                                <Image src={Deco} className={styles.cardImg} alt="img deco"/> 
+                                <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.cardImg} alt="img deco"/> 
                                 <p className={styles.cardText}>Deco Habitación</p>
                             <div className={styles.cardBtn}>
-                                <a href='./decoracionHabitacion' className={styles.cardVerMas}>
+                                <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.cardVerMas}>
                                     <p>Ver Mas</p>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className={styles.card}>
-                                <Image src={Deco} className={styles.cardImg} alt="img deco"/> 
+                                <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.cardImg} alt="img deco"/> 
                                 <p className={styles.cardText}>Deco Habitación</p>
                             <div className={styles.cardBtn}>
-                                <a href='./decoracionHabitacion' className={styles.cardVerMas}>
+                                <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.cardVerMas}>
                                     <p>Ver Mas</p>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     
@@ -71,80 +71,80 @@ export default function contacto(){
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div> 
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div>
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div> 
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div>
 
                             {/* <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div> 
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div>  
 
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div>
                                
                             <div className={styles.cardVideos}>
                                 <div className={styles.videos}>
-                                    <Image src={Deco} className={styles.iframe} alt="img deco"/>
-                                    <a href='./decoracionHabitacion' className={styles.BtnVerMas}>
+                                    <Image width={300} height={500} src='https://i.ibb.co/vDTjZqR/asesoria2.jpg' className={styles.iframe} alt="img deco"/>
+                                    <Link href='https://drive.google.com/drive/u/2/folders/11O00vpOO27BpFRFGmm6au_ibkEqEPl3B' className={styles.BtnVerMas}>
                                         <p>Ver Mas</p>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <p> Deco Habitación </p> 
                             </div>    */}

@@ -29,22 +29,19 @@ import { product } from '../../sanity/schemas/product-schema';
 
 const macrame = [
   {
-    id: '1',
-    "name": "Guirnalda Macramé",
-    "price": "3000",
-    "image": "https://i.ibb.co/1dYP951/guirnalda-Macrame.jpg",
+    link: `/components/products/guirnalda-macram`,
+    name: "Guirnalda Macramé",
+    image: "https://i.ibb.co/1dYP951/guirnalda-Macrame.jpg",
   },
   {
-    id: '2',
-    "name": "Macramé Boho",   
-    "price": "3000",
-    "image": "https://i.ibb.co/Dwj9tks/Macrame-xs.jpg",
+    link: `/components/products/tapz-macram-boho`,
+    name: "Macramé Boho",   
+    image: "https://i.ibb.co/Dwj9tks/Macrame-xs.jpg",
   },
   {
-    id: '3',
-    "name": "Macramé Lelis",
-    "price": "3000",
-    "image": "https://i.ibb.co/vP0R91Z/Macrame-XL.jpg",
+    link: `/components/products/tapz-macram-lelis`,
+    name: "Macramé Lelis",
+    image: "https://i.ibb.co/vP0R91Z/Macrame-XL.jpg",
   }
 ]
 
@@ -65,27 +62,36 @@ export default  function Page() {
         <Link href={`/components/talleres`}>
           <div className={styles.slides}>
             <Image 
-            as={NextImage} 
-            className={styles.iSlide} 
-            isZoomed 
-            src='https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg'
-             width={300} 
-             height={500} 
-             alt='taller presencial' />
+              as={NextImage} 
+              className={styles.iSlide} 
+              isZoomed 
+              src='https://i.ibb.co/NVvJ7Rj/taller-Presencial.jpg'
+              width={300} 
+              height={500} 
+              alt='taller presencial' 
+            />
             <h3 className={styles.tSlide}>Talleres</h3>
           </div>
         </Link>
 
-        <Link href={`/components/products`}>
+        <Link href={`/components/macrame`}>
           <div className={styles.slides}>
-            <Image as={NextImage} className={styles.iSlide} isZoomed src='https://i.ibb.co/vP0R91Z/Macrame-XL.jpg' width={300} height={500} alt='macrame hecho a mano' />
+            <Image 
+              as={NextImage} 
+              className={styles.iSlide} 
+              isZoomed 
+              src='https://i.ibb.co/vP0R91Z/Macrame-XL.jpg' 
+              width={300} 
+              height={500} 
+              alt='macrame hecho a mano' 
+            />
             <h3 className={styles.tSlide}>Macramés</h3>
           </div>
         </Link>
 
       </div>
 
-{/* ----------------------------------Productos------------------------------- */}
+{/* ----------------------------------Mas elegidos------------------------------- */}
       <div>
 
         <h2 className={styles.title}>Los mas Elegidos:</h2>
@@ -94,29 +100,32 @@ export default  function Page() {
           <div className={styles.cardLayout}>
             {macrame.map((macrame, id) => (
               <li
-                key={id}
-                className={styles.product}
-                >
-                <Link href={`/components/products/`} className={styles.cardBtn}>
+                  key={id}
+                  className={styles.product}
+                  >
+                  <Link href={macrame.link} className={styles.cardBtn}>
                   <div className={styles.card}>
-                      <Image as={NextImage} isZoomed src={macrame.image} width={400} height={800} alt="Macramé Producto comprable" className={styles.cardImg}/>
+                      <Image as={NextImage} isZoomed src={macrame.image} width={400} height={600} alt="Macramé Producto comprable" className={styles.cardImg}/>
                       <div className={styles.cardBody}>
-                        <h3 className={styles.cardTitle}>{macrame.name}</h3>
+                          <h3 className={styles.cardTitle}>{macrame.name}</h3>
+                          <Button color='primary' 
+                          className="text-black bg-amber-100 rounded-2xl">Ver Producto</Button>
                       </div>
                   </div>
-                </Link>
+                  </Link>
               </li>
-            ))}
-            
+              ))} 
           </div>
+
           <Link href={`/components/products/`} className={styles.cardBtn}>
           <Button
-            className="relative overflow-visible rounded-full hover:-translate-y-1 px-12 bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+            className="relative overflow-visible rounded-full hover:-translate-y-1 px-12 bg-gradient-to-tr from-yellow-100 to-yellow-200 text-black shadow-xl"
             size="lg"
             >
-            Ver mas
+            Ver mas Productos
           </Button>
           </Link>
+
         </div>
 
       </div>
@@ -129,7 +138,7 @@ export default  function Page() {
           <p className={styles.asesoriasT}>Decoremos Juntas</p>
           <Link href={'/components/asesorias'}> 
           <Button
-            className="relative overflow-visible rounded-full hover:-translate-y-1 px-12 bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-gradient-to-tr from-yellow-200 to-yellow-300 text-black shadow-xl after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+            className="relative overflow-visible rounded-full hover:-translate-y-1 px-12 bg-gradient-to-tr from-yellow-100 to-yellow-200 text-black shadow-xl after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-gradient-to-tr after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
             size="lg"
             >
             Ver mas

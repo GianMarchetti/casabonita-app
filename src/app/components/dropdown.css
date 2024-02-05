@@ -25,11 +25,11 @@ ul {
     width: 150px;
     gap: 10px;
     background: var(--accent);
+    padding-left: 10px !important;
   }
 
   li {
     text-align: left;
-    color: #008000;
     display: block;
     transform-origin: -20px 50%;
   }
@@ -39,7 +39,7 @@ ul {
     list-style: none;
     margin: 0;
     padding: 10px;
-    height: 11em;
+    /* height: 11em; */
 }
 
 button {
@@ -47,7 +47,7 @@ button {
     background: beige;
     color: var(--black);
     border: none;
-    border-radius: 10px;
+    border-radius: 10px !important;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 600;
@@ -86,15 +86,9 @@ button {
       display: flex;
     }
     button{
-        width: 90%;
+        width: 100%;
     }
-
     .navDesk{
       display: block;
-    }
-
-    ul,
-    li {
-    height: 24em;
     }
 }

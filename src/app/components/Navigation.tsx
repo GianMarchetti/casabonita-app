@@ -56,16 +56,24 @@ function useMenuAnimation(isOpen : boolean) {
   return scope;
 }
 
-const linksDesk = [{
-  label: 'Macramé',
+const linksDesk = [
+{
+  label: 'Productos',
   route: '/components/products'
-},{
+},
+  {
+  label: 'Macramé',
+  route: '/components/macrame'
+},
+{
   label: 'Asesorias',
   route: '/components/asesorias'
-},{
+},
+{
     label: 'Talleres',
     route: '/components/talleres'
-}]
+}
+]
 
 function useMenuAnimationMob(isOpen : boolean) {
   const [scopeMob, animateMob] = useAnimate();
@@ -103,12 +111,17 @@ function useMenuAnimationMob(isOpen : boolean) {
 }
 
 const linksMob = [
-  {
+{
   label: 'Inicio',
   route: '/',
-},{
+},
+{
   label: 'Blog',
   route: `https://www.instagram.com/yas.casabonita/`
+},
+{
+  label: 'Productos',
+  route: '/components/products'
 },
 {
   label: 'Macramé',
@@ -143,19 +156,47 @@ export function Navigation () {
   if (pathname.startsWith('/studio')) return null
 
   return (
-    <>
-      <header className={styles.header}>
+    <header className={styles.header}>
 
 {/* -----------------Menu Desktop------------------------------- */}
 
-        <nav className={styles.nav}>
+      <nav className={styles.nav}>
 
-        <Link href='/' className={styles.logoDesk}>
+        <div className={styles.dropMob}>
+            <div className="menu" ref={scopeMob} >
+            <motion.button 
+                whileTap={{ scale: 0.97 }}
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
+                    <svg width="15" height="15" viewBox="0 0 20 20">
+                        <path d="M0 7 L 20 7 L 10 16" />
+                    </svg>
+                </div>
+            </motion.button> 
+                  <ul style={{
+                      pointerEvents: isOpen ? "auto" : "none",
+                      clipPath: "inset(10% 50% 90% 50% round 10px)"
+                    }} className="dropMob">
+                      {linksMob.map(({ label, route }) => (
+                      <li key={route}>
+                        <Link href={route}>
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
+                    </ul>{" "}
+            </div>
+          </div>
+
+        <Link href='/'>
           <Image priority alt='Logo de Casa Bonita' src={Logo} className={styles.logoImg} width={200} height={200} />
         </Link>
 
+        <div className={styles.links}>             
           <div className={styles.dropDesk}>
             <Link href={`/`} >Inicio</Link>
+            {/* <Link href={`/components/products/`} >p</Link> */}
             <div className="menu" ref={scope} >
             <motion.button 
                 whileTap={{ scale: 0.97 }}
@@ -183,48 +224,17 @@ export function Navigation () {
             <Link href={`/components/guias`}> <span>Guias</span><span className={styles.Free}><p className={Big.className}>GRATIS</p></span></Link>
             <Link href={`https://www.instagram.com/yas.casabonita/`}>Blog</Link>
             <Link href={`/components/contact`}>Contacto</Link>
-            <Link href={`/components/cart`}>
-              <Button size='sm' variant='ghost' color='warning'>
-                <span className="ml-1 text-sm font-bold text-black">{cartCount}</span>
+            </div>
+            <Link href={`/components/cart`} className='h-fit w-fit'>
+              <Button size='sm' className='bg-amber-100 lg:bg-transparent hover:bg-amber-100 sm:bg-amber-100 h-fit w-fit ml-1'>
+                <span className="ml-1 text-sm font-bold text-black ">{cartCount}</span>
                 <ShoppingBagIcon className="h-6 w-6" />
               </Button>
             </Link>
-          </div>
+        </div>
 
-{/*---------------------- Menu Mobile ------------------------------------*/}
+      </nav>
 
-          <div className={styles.dropMob}>
-            <div className="menu" ref={scopeMob} >
-            <motion.button 
-                whileTap={{ scale: 0.97 }}
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
-                    <svg width="15" height="15" viewBox="0 0 20 20">
-                        <path d="M0 7 L 20 7 L 10 16" />
-                    </svg>
-                </div>
-            </motion.button> 
-                  <ul style={{
-                      pointerEvents: isOpen ? "auto" : "none",
-                      clipPath: "inset(10% 50% 90% 50% round 10px)"
-                    }} className="dropMob">
-                      {linksMob.map(({ label, route }) => (
-                      <li key={route}>
-                        <Link href={route}>
-                          {label}
-                        </Link>
-                      </li>
-                    ))}
-                    </ul>{" "}
-            </div>
-            <Link href='/' className={styles.logoMob}><Image priority alt='Logo de Casa Bonita' src={Logo} className={styles.logoImg} width={200} height={200}/></Link>
-            <Link href={`/cart`}><ShoppingBagIcon className="h-6 w-6" /></Link>
-          </div>
-
-        </nav>
-
-      </header>
-    </>
+    </header>
   )
 }

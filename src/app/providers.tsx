@@ -27,15 +27,3 @@ export function Providers({ children }: Props) {
     </CartProvider>
   )
 }
-
-
-
-// import { Toaster } from "@/components/ui/toaster"
-// import { TailwindIndicator } from "@/components/tailwind-indicator"
-// import { ThemeProvider } from "@/components/theme-provider"
-
-//     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-//       <Toaster />
-//     {children}
-//     <TailwindIndicator />
-//     </ThemeProvider>

@@ -4,7 +4,7 @@
   .itemP  img {
     width: 100%;
     object-fit: unset;
-    height: 29rem;
+    height: 100%;
     /* border-top-left-radius: 2%; */
   }
   
@@ -20,9 +20,9 @@
 
 @media screen and (max-width: 850px) {
   .itemP {
-    height: 20em;
+    height: fit-content;
   }
   .itemP  img {
-    height: 20rem;
+    height: fit-content;
   }
 }

@@ -3,17 +3,18 @@
 import Image from "next/image"
 import Link from "next/link"
 import { urlForImage } from "../../../sanity/lib/image"
-import {  XMarkIcon, ClockIcon } from '@heroicons/react/24/solid'
+import {  XMarkIcon, PlusIcon } from '@heroicons/react/24/solid'
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 import { Product } from "use-shopping-cart/core"
 
 import { shimmer, toBase64 } from "../../../lib/image"
 import { getSizeName } from "../../../lib/utils"
-import { Button } from "../components/ui/button"
-import { Input } from "../components/ui/input"
-import { toast, useToast } from "../components/ui/use-toast"
-import { CartItemsEmpty } from "../components/cart-items-empty"
+import { Button } from "./ui/button"
+import { Input } from "./ui/input"
+import { toast, useToast } from "./ui/use-toast"
+import { CartItemsEmpty } from "./cart-items-empty"
 import { product } from "../../../sanity/schemas/product-schema"
+
 
 export function CartItems() {
   const { cartDetails, removeItem, setItemQuantity } = useShoppingCart()
@@ -34,7 +35,7 @@ export function CartItems() {
   return (
     <ul
       role="list"
-      className="relative float-none w-fit h-fit top-0 divide-y divide-gray-200 border-y border-gray-200 rounded-md dark:divide-gray-500 dark:border-gray-500"
+      className="relative float-none w-full h-fit top-0 divide-y divide-gray-200 border-y border-gray-200 rounded-md dark:divide-gray-500 dark:border-gray-500 text-black lg:w-fit"
     >
       {cartItems.map((product, productIdx) => (
         <li key={product._id} className="flex h-fit py-6 sm:py-10">
@@ -92,13 +93,17 @@ export function CartItems() {
               </div>
             </div>
 
-            <p className="mt-4 flex space-x-2 text-sm">
-              <ClockIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
-              <span>Llega en 1 Semana</span>
-            </p>
           </div>
         </li>
       ))} 
+
+      <Link href="/components/products" className="mt-2">
+        <Button size="sm" className="relative bg-green-500 hover:bg-green-400">
+          <PlusIcon className="mr-2 h-4 w-4" />
+          Agrega Productos
+        </Button>
+      </Link>
+
     </ul>
   )
 }

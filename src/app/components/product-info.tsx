@@ -7,8 +7,8 @@ import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 
 import { SanityProduct } from "../../../config/inventory"
 import { getSizeName } from "../../../lib/utils"
-import { Button } from "../components/ui/button"
-import { useToast } from "../components/ui/use-toast"
+import { Button } from "./ui/button"
+import { useToast } from "./ui/use-toast"
 
 interface Props {
   product: SanityProduct
@@ -53,16 +53,6 @@ export function ProductInfo({ product}: Props) {
         <div className="space-y-6 text-base">{product.description}</div>
       </div>
 
-      {/* <div className="mt-4">
-        <p>
-          Size: <strong>{getSizeName(selectedSize)}</strong>
-        </p>
-        {product.sizes.map((size) => (
-          <Button onClick={() => setSelectedSize(size)} key={size} variant={selectedSize === size ? "default" : "outline"} className="mr-2 mt-4 w-fit bg-slate-400 hover:bg-white-200">
-            {getSizeName(size)}
-          </Button>
-        ))}
-      </div> */}
 
       <form className="mt-6">
         <div className="mt-4 flex">
@@ -87,7 +77,7 @@ export function ProductInfo({ product}: Props) {
           </Link>
         </div>        
       </form>
-      <form className="mt-6">
+      {/* <form className="mt-6">
         <div className="mt-4 flex">
           <Button
               type="button"
@@ -96,7 +86,7 @@ export function ProductInfo({ product}: Props) {
               Comprar Ahora con MercadoPago
             </Button>
         </div>        
-      </form>
+      </form> */}
     </div>
   )
 }
