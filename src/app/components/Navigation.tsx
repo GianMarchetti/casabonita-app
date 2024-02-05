@@ -189,13 +189,6 @@ export function Navigation () {
                 <ShoppingBagIcon className="h-6 w-6" />
               </Button>
             </Link>
-            {/* {process.env.NODE_ENV === 'development' && (
-            <Link href='/studio'>
-              <Button size='sm' variant='ghost'>
-                <PencilSquareIcon className='h-5 w-5' />
-              </Button>
-            </Link>
-          )} */}
           </div>
 
 {/*---------------------- Menu Mobile ------------------------------------*/}
