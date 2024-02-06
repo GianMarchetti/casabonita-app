@@ -196,7 +196,6 @@ export function Navigation () {
         <div className={styles.links}>             
           <div className={styles.dropDesk}>
             <Link href={`/`} >Inicio</Link>
-            {/* <Link href={`/components/products/`} >p</Link> */}
             <div className="menu" ref={scope} >
             <motion.button 
                 whileTap={{ scale: 0.97 }}

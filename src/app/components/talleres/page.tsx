@@ -1,4 +1,4 @@
-
+'use client'
 import NextImage from 'next/image'
 import { Image, Button } from '@nextui-org/react';
 import BootstrapCarousel from '../../carrousels/Bootstrap'
@@ -7,7 +7,7 @@ import styles from './talleres.module.css'
 import Link from 'next/link'
 
 
-export default async function Talleres(){
+export default function Talleres(){
 
     return(
         <main className={styles.containerMain}>
@@ -39,7 +39,7 @@ export default async function Talleres(){
                     <p>Precio: <strong>$5000</strong></p>
                     <Link 
                       href='/components/products/taller-presencial-santa-fe' className={styles.cardBtn}>
-                      <p>Ver Mas</p>
+                      <Button className="text-black bg-amber-100 border-2 hover:bg-amber-200 rounded-2xl">Ver Mas</Button>
                       </Link>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export default async function Talleres(){
                     <p>Precio: <strong>$5000</strong></p>
                     <Link 
                       href='/components/products/taller-macram-personalizado' className={styles.cardBtn}>
-                      <p>Ver Mas</p>
+                      <Button className="text-black bg-amber-100 border-2 hover:bg-amber-200 rounded-2xl">Ver Mas</Button>
                       </Link>
                 </div>
             </div>
@@ -65,7 +65,7 @@ export default async function Talleres(){
                     <p>Precio: <strong>$5000</strong></p>
                     <Link 
                       href='/components/products/taller-virtual-macram' className={styles.cardBtn}>
-                      <p>Ver Mas</p>
+                      <Button className="text-black bg-amber-100 hover:bg-amber-200 rounded-2xl">Ver Mas</Button>
                       </Link>
                 </div>
             </div>

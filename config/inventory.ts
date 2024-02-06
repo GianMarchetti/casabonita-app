@@ -154,7 +154,7 @@ export const inventory: InventoryProduct[] = [
     id: "libpiclshg-7yhw5f2e47-phfbom1gx2",
     sku: "Taller_Presencial_Santa_Fe",
     name: "Taller presencial Santa Fe",
-    description: "Taller de macramé, presencial en la ciudad de Santa Fe(ARG), en este taller vas a aprender a hacer macramé",
+    description: "Taller de macramé, presencial en la ciudad de Santa Fe, en este taller vas a aprender a hacer macramé",
     price: 500000,
     image: "https://i.ibb.co/wLL4w84/taller-presencial6.jpg",
     images: [

@@ -98,7 +98,7 @@ export function CartSummary() {
               onClick={() => Comprar(product)}
               type="button"
               disabled={isDisabled}
-              className="w-full bg-indigo-500 py-6 text-base font-medium hover:bg-gradient-to-tr from-indigo-300 to-indigo-600 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full py-6 text-base font-medium bg-green-500 hover:bg-green-400 text-white"
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
               {isLoading ? "Loading..." : "Finalizar Compra"}
