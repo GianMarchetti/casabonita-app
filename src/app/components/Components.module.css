@@ -20,20 +20,21 @@
     height: 150px;
     border-radius: 8%;
 }
-.links{
-    display: flex;
-    align-items: baseline;
-}
 
-.dropDesk {
+
+.links {
     margin-top: 1em;
     padding: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     list-style: none;
     height: fit-content;
+}
+
+.logoImgMob {
+    display: none;
 }
 
 .dropMob {
@@ -108,13 +109,8 @@
         width: 100%;
         top: 0;
     }
-    .nav{
-        flex-direction: row;
-        justify-content: space-around;
-    }
     .logoImg{
-        height: 6em;
-        width: 6em;
+        display: none;
     }
     .cart{
         width: 55px;
@@ -122,6 +118,11 @@
     }
     .dropDesk{
         display: none;
+    }
+    .logoImgMob{
+        height: 6em;
+        width: 6em;
+        display: block;
     }
     .dropMob{
         display: block;
