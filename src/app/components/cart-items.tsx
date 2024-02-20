@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { urlForImage } from "../../../sanity/lib/image"
-import {  XMarkIcon, PlusIcon } from '@heroicons/react/24/solid'
+import {  XMarkIcon, PlusIcon, ArrowLeftIcon } from '@heroicons/react/24/solid'
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 import { Product } from "use-shopping-cart/core"
 
@@ -14,6 +14,7 @@ import { Input } from "./ui/input"
 import { toast, useToast } from "./ui/use-toast"
 import { CartItemsEmpty } from "./cart-items-empty"
 import { product } from "../../../sanity/schemas/product-schema"
+import { ArrowLeft, MoveLeft } from "lucide-react"
 
 
 export function CartItems() {
@@ -35,8 +36,12 @@ export function CartItems() {
   return (
     <ul
       role="list"
-      className="relative float-none w-full h-fit top-0 divide-y divide-gray-200 border-y border-gray-200 rounded-md dark:divide-gray-500 dark:border-gray-500 text-black lg:w-fit"
+      className="relative float-none w-full h-fit top-0 divide-y divide-gray-200 border-y border-gray-200 rounded-md dark:divide-gray-500 dark:border-gray-500 text-black lg:w-fit p-4"
     >
+      <Link href="/components/products" className="h-fit w-fit flex items-center gap-2 p-2 text-sm font-medium bg-amber-100 lg:bg-transparent hover:bg-amber-100 sm:bg-amber-100 text-black rounded-lg">
+        <ArrowLeft className="h-5 w-5 " aria-hidden="true" />
+        <p>Volver</p>
+      </Link>
       {cartItems.map((product, productIdx) => (
         <li key={product._id} className="flex h-fit py-6 sm:py-10">
           <div className="shrink-0">
